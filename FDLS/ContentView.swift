@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+let operatorColor = Color("operatorBackground")
+
 struct ContentView: View {
     var body: some View {
-        Text("FDLS, \nis mean \"Flutter Developer Learning SwiftUI\" ")
-            .padding()
+        Text("+")
+            .font(.system(size: 38))
+            .foregroundColor(.white)
+            .frame(width: 88, height: 88)
+            .background(operatorColor)
+            .cornerRadius(44)
     }
 }
 

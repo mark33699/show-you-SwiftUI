@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("FDLS, \nis mean \"Flutter Developer Learning SwiftUI\" ")
             .padding()
     }
 }

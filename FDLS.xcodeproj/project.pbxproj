@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C44090B28AD56B500DA3D61 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44090A28AD56B500DA3D61 /* CalculatorButton.swift */; };
 		3C44090D28AD596E00DA3D61 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44090C28AD596E00DA3D61 /* colors.swift */; };
+		3C97882C28AD7F45004913E2 /* ShowMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97882B28AD7F45004913E2 /* ShowMeView.swift */; };
 		3CA7EA8628ABFF940005C958 /* FDLSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8528ABFF940005C958 /* FDLSApp.swift */; };
 		3CA7EA8828ABFF940005C958 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8728ABFF940005C958 /* CalculatorView.swift */; };
 		3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8928ABFF950005C958 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		3C44090A28AD56B500DA3D61 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		3C44090C28AD596E00DA3D61 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		3C97882B28AD7F45004913E2 /* ShowMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMeView.swift; sourceTree = "<group>"; };
 		3CA7EA8228ABFF940005C958 /* FDLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA7EA8528ABFF940005C958 /* FDLSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLSApp.swift; sourceTree = "<group>"; };
 		3CA7EA8728ABFF940005C958 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3C44090928AD568300DA3D61 /* components */,
 				3CA7EA8928ABFF950005C958 /* Assets.xcassets */,
 				3CA7EA8B28ABFF950005C958 /* Preview Content */,
+				3C97882B28AD7F45004913E2 /* ShowMeView.swift */,
 			);
 			path = FDLS;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA7EA8828ABFF940005C958 /* CalculatorView.swift in Sources */,
+				3C97882C28AD7F45004913E2 /* ShowMeView.swift in Sources */,
 				3C44090D28AD596E00DA3D61 /* colors.swift in Sources */,
 				3C44090B28AD56B500DA3D61 /* CalculatorButton.swift in Sources */,
 				3CA7EA8628ABFF940005C958 /* FDLSApp.swift in Sources */,

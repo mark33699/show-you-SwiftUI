@@ -9,14 +9,19 @@ import SwiftUI
 
 struct CalculatorView: View {
   var body: some View {
-    HStack {
-      CalculatorButton(title: "1", bgColorName: digitColorName)
+    ZStack {
+//      Color.teal
+      
+      HStack {
+        CalculatorButton(title: "1", bgColorName: digitColorName)
 
-      CalculatorButton(title: "2", bgColorName: digitColorName)
+        CalculatorButton(title: "2", bgColorName: digitColorName)
 
-      CalculatorButton(title: "3", bgColorName: digitColorName)
+        CalculatorButton(title: "3", bgColorName: digitColorName)
 
-      CalculatorButton(title: "+", bgColorName: operatorColorName)
+        CalculatorButton(title: "+", bgColorName: operatorColorName)
+      }
+      
     }
   }
 }

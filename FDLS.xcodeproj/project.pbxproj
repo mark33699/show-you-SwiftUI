@@ -13,49 +13,16 @@
 		3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3CA7EA9328ABFF950005C958 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA7EA7A28ABFF930005C958 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CA7EA8128ABFF940005C958;
-			remoteInfo = FDLS;
-		};
-		3CA7EA9D28ABFF950005C958 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA7EA7A28ABFF930005C958 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CA7EA8128ABFF940005C958;
-			remoteInfo = FDLS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		3CA7EA8228ABFF940005C958 /* FDLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA7EA8528ABFF940005C958 /* FDLSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLSApp.swift; sourceTree = "<group>"; };
 		3CA7EA8728ABFF940005C958 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CA7EA8928ABFF950005C958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3CA7EA9228ABFF950005C958 /* FDLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CA7EA9C28ABFF950005C958 /* FDLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3CA7EA7F28ABFF940005C958 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CA7EA8F28ABFF950005C958 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CA7EA9928ABFF950005C958 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,8 +44,6 @@
 			isa = PBXGroup;
 			children = (
 				3CA7EA8228ABFF940005C958 /* FDLS.app */,
-				3CA7EA9228ABFF950005C958 /* FDLSTests.xctest */,
-				3CA7EA9C28ABFF950005C958 /* FDLSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,42 +87,6 @@
 			productReference = 3CA7EA8228ABFF940005C958 /* FDLS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3CA7EA9128ABFF950005C958 /* FDLSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CA7EAA928ABFF950005C958 /* Build configuration list for PBXNativeTarget "FDLSTests" */;
-			buildPhases = (
-				3CA7EA8E28ABFF950005C958 /* Sources */,
-				3CA7EA8F28ABFF950005C958 /* Frameworks */,
-				3CA7EA9028ABFF950005C958 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CA7EA9428ABFF950005C958 /* PBXTargetDependency */,
-			);
-			name = FDLSTests;
-			productName = FDLSTests;
-			productReference = 3CA7EA9228ABFF950005C958 /* FDLSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3CA7EA9B28ABFF950005C958 /* FDLSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CA7EAAC28ABFF950005C958 /* Build configuration list for PBXNativeTarget "FDLSUITests" */;
-			buildPhases = (
-				3CA7EA9828ABFF950005C958 /* Sources */,
-				3CA7EA9928ABFF950005C958 /* Frameworks */,
-				3CA7EA9A28ABFF950005C958 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CA7EA9E28ABFF950005C958 /* PBXTargetDependency */,
-			);
-			name = FDLSUITests;
-			productName = FDLSUITests;
-			productReference = 3CA7EA9C28ABFF950005C958 /* FDLSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,14 +99,6 @@
 				TargetAttributes = {
 					3CA7EA8128ABFF940005C958 = {
 						CreatedOnToolsVersion = 13.0;
-					};
-					3CA7EA9128ABFF950005C958 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 3CA7EA8128ABFF940005C958;
-					};
-					3CA7EA9B28ABFF950005C958 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 3CA7EA8128ABFF940005C958;
 					};
 				};
 			};
@@ -195,8 +116,6 @@
 			projectRoot = "";
 			targets = (
 				3CA7EA8128ABFF940005C958 /* FDLS */,
-				3CA7EA9128ABFF950005C958 /* FDLSTests */,
-				3CA7EA9B28ABFF950005C958 /* FDLSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -208,20 +127,6 @@
 			files = (
 				3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */,
 				3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CA7EA9028ABFF950005C958 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CA7EA9A28ABFF950005C958 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,34 +142,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CA7EA8E28ABFF950005C958 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CA7EA9828ABFF950005C958 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3CA7EA9428ABFF950005C958 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CA7EA8128ABFF940005C958 /* FDLS */;
-			targetProxy = 3CA7EA9328ABFF950005C958 /* PBXContainerItemProxy */;
-		};
-		3CA7EA9E28ABFF950005C958 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CA7EA8128ABFF940005C958 /* FDLS */;
-			targetProxy = 3CA7EA9D28ABFF950005C958 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3CA7EAA428ABFF950005C958 /* Debug */ = {
@@ -443,102 +321,6 @@
 			};
 			name = Release;
 		};
-		3CA7EAAA28ABFF950005C958 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3TC7C2KN5F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.markfly.FDLSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FDLS.app/FDLS";
-			};
-			name = Debug;
-		};
-		3CA7EAAB28ABFF950005C958 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3TC7C2KN5F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.markfly.FDLSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FDLS.app/FDLS";
-			};
-			name = Release;
-		};
-		3CA7EAAD28ABFF950005C958 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3TC7C2KN5F;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.markfly.FDLSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FDLS;
-			};
-			name = Debug;
-		};
-		3CA7EAAE28ABFF950005C958 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3TC7C2KN5F;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.markfly.FDLSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FDLS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,24 +338,6 @@
 			buildConfigurations = (
 				3CA7EAA728ABFF950005C958 /* Debug */,
 				3CA7EAA828ABFF950005C958 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CA7EAA928ABFF950005C958 /* Build configuration list for PBXNativeTarget "FDLSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CA7EAAA28ABFF950005C958 /* Debug */,
-				3CA7EAAB28ABFF950005C958 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CA7EAAC28ABFF950005C958 /* Build configuration list for PBXNativeTarget "FDLSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CA7EAAD28ABFF950005C958 /* Debug */,
-				3CA7EAAE28ABFF950005C958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

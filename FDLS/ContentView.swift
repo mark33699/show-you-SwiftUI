@@ -10,18 +10,18 @@ import SwiftUI
 let operatorColor = Color("operatorBackground")
 
 struct ContentView: View {
-    var body: some View {
-        Text("+")
-            .font(.system(size: 38))
-            .foregroundColor(.white)
-            .frame(width: 88, height: 88)
-            .background(operatorColor)
-            .cornerRadius(44)
-    }
+  var body: some View {
+    Text("+")
+      .font(.system(size: 38))
+      .foregroundColor(.white)
+      .frame(width: 88, height: 88)
+      .background(operatorColor)
+      .cornerRadius(44)
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct CalculatorView: View {
+  
+  let buttons: [CalculatorButtonItem] = [
+    .digit(1), .digit(2), .digit(3), .op(.plus)
+  ]
+  
   var body: some View {
     ZStack {
 //      Color.teal
       
       HStack {
-        CalculatorButton(title: "1", bgColorName: digitColorName)
-
-        CalculatorButton(title: "2", bgColorName: digitColorName)
-
-        CalculatorButton(title: "3", bgColorName: digitColorName)
-
-        CalculatorButton(title: "+", bgColorName: operatorColorName)
+        ForEach(buttons, id: \.self) { button in
+          CalculatorButton(title: button.title, bgColorName: button.backgroundColorName)
+        }
       }
       
     }

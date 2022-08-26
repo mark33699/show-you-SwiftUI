@@ -5,7 +5,7 @@
 //  Created by Mark HsieH on 2022/8/26.
 //
 
-import Foundation
+import UIKit
 
 enum CalculatorButtonItem: Hashable {
   enum Operator: String {
@@ -45,4 +45,12 @@ extension CalculatorButtonItem {
       case .command: return commandColorName
     }
   }
+
+  var size: CGSize {
+    if case .digit(let value) = self, value == 0 {
+      return CGSize(width: 88 * 2 + 8, height: 88)
+    }
+    return CGSize(width: 88, height: 88)
+  }
+  
 }

@@ -6,16 +6,20 @@
 //  Copyright © 2019 OneV's Den. All rights reserved.
 //
 
-import Combine
 import SwiftUI
 
 let scale = UIScreen.main.bounds.width / 414
 
 struct ContentView: View {
+  
+  @State private var brain = CalculatorBrain.left("0")
+  
   var body: some View {
     VStack(spacing: 12) {
+      
       Spacer()
-      Text("0")
+      
+      Text(brain.output)
         .font(.system(size: 76))
         .minimumScaleFactor(0.5)
         .padding(.trailing, 24 * scale)
@@ -23,6 +27,11 @@ struct ContentView: View {
           minWidth: 0,
           maxWidth: .infinity,
           alignment: .trailing)
+      
+      Button("GO") {
+        brain = CalculatorBrain.left("100")
+      }
+      
       CalculatorButtonPad()
         .padding(.bottom)
     }

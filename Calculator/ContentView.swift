@@ -20,6 +20,10 @@ struct ContentView: View {
       
       Spacer()
       
+      Button("操作記錄 step: \(model.history.count)") {
+        print(model.history)
+      }
+      
       Text(model.brain.output)
         .font(.system(size: 76))
         .minimumScaleFactor(0.5)
@@ -29,7 +33,7 @@ struct ContentView: View {
           maxWidth: .infinity,
           alignment: .trailing)
       
-      CalculatorButtonPad(brain: $model.brain)
+      CalculatorButtonPad(model: model)
         .padding(.bottom)
     }
   }
@@ -67,9 +71,10 @@ struct CalculatorButton: View {
 
 struct CalculatorButtonRow: View {
   
-  @Binding var brain: CalculatorBrain
-  
+//  @Binding var brain: CalculatorBrain
+  var model: CalculatorModel //no need @Binding? because it's a class?
   let row: [CalculatorButtonItem]
+  
   var body: some View {
     HStack {
       ForEach(row, id: \.self) { item in
@@ -80,7 +85,7 @@ struct CalculatorButtonRow: View {
           foregroundColor: item.foregroundColor)
         {
           print("Button: \(item.title)")
-          brain = brain.apply(item: item)
+          model.apply(item)
         }
       }
     }
@@ -89,7 +94,8 @@ struct CalculatorButtonRow: View {
 
 struct CalculatorButtonPad: View {
   
-  @Binding var brain: CalculatorBrain
+//  @Binding var brain: CalculatorBrain
+  var model: CalculatorModel //no need @Binding? because it's a class?
   
   let pad: [[CalculatorButtonItem]] = [
     [.command(.clear), .command(.flip),
@@ -103,7 +109,7 @@ struct CalculatorButtonPad: View {
   var body: some View {
     VStack(spacing: 8) {
       ForEach(pad, id: \.self) { row in
-        CalculatorButtonRow(brain: $brain, row: row)
+        CalculatorButtonRow(model: model, row: row)
       }
     }
   }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA5272928BA69AE00FC01A0 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5272828BA69AD00FC01A0 /* CalculatorModel.swift */; };
 		4B2170B722B73C5700C8DB9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2170B622B73C5700C8DB9F /* AppDelegate.swift */; };
 		4B2170B922B73C5700C8DB9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2170B822B73C5700C8DB9F /* SceneDelegate.swift */; };
 		4B2170BB22B73C5700C8DB9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2170BA22B73C5700C8DB9F /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CA5272828BA69AD00FC01A0 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		4B2170B322B73C5700C8DB9F /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2170B622B73C5700C8DB9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B2170B822B73C5700C8DB9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				4B2170C122B73C5B00C8DB9F /* LaunchScreen.storyboard */,
 				4B2170C422B73C5B00C8DB9F /* Info.plist */,
 				4B2170BE22B73C5B00C8DB9F /* Preview Content */,
+				3CA5272828BA69AD00FC01A0 /* CalculatorModel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				4B2170B722B73C5700C8DB9F /* AppDelegate.swift in Sources */,
 				4B2170B922B73C5700C8DB9F /* SceneDelegate.swift in Sources */,
 				D1179CCE22DE27AA00E8FEE1 /* CalculatorButtonItem.swift in Sources */,
+				3CA5272928BA69AE00FC01A0 /* CalculatorModel.swift in Sources */,
 				4B43393F22E5782500DB7B34 /* CalculatorBrain.swift in Sources */,
 				4B2170BB22B73C5700C8DB9F /* ContentView.swift in Sources */,
 			);

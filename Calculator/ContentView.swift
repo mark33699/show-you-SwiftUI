@@ -13,7 +13,8 @@ let scale = UIScreen.main.bounds.width / 414
 struct ContentView: View {
   
 //  @State private var brain = CalculatorBrain.left("0")
-  @ObservedObject var model = CalculatorModel()
+//  @ObservedObject var model = CalculatorModel()
+  @EnvironmentObject var model: CalculatorModel
   @State private var isShowingHistory = false
   
   var body: some View {
@@ -38,7 +39,7 @@ struct ContentView: View {
           maxWidth: .infinity,
           alignment: .trailing)
       
-      CalculatorButtonPad(model: model)
+      CalculatorButtonPad()
         .padding(.bottom)
     }
   }
@@ -47,9 +48,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      ContentView()
-      ContentView().previewDevice("iPhone SE")
-      ContentView().previewDevice("iPad Air 2")
+      ContentView().environmentObject(CalculatorModel())
     }
   }
 }
@@ -77,7 +76,7 @@ struct CalculatorButton: View {
 struct CalculatorButtonRow: View {
   
 //  @Binding var brain: CalculatorBrain
-  var model: CalculatorModel //no need @Binding? because it's a class?
+  @EnvironmentObject var model: CalculatorModel
   let row: [CalculatorButtonItem]
   
   var body: some View {
@@ -100,7 +99,7 @@ struct CalculatorButtonRow: View {
 struct CalculatorButtonPad: View {
   
 //  @Binding var brain: CalculatorBrain
-  var model: CalculatorModel //no need @Binding? because it's a class?
+//  var model: CalculatorModel //no need @Binding? because it's a class?
   
   let pad: [[CalculatorButtonItem]] = [
     [.command(.clear), .command(.flip),
@@ -114,7 +113,7 @@ struct CalculatorButtonPad: View {
   var body: some View {
     VStack(spacing: 8) {
       ForEach(pad, id: \.self) { row in
-        CalculatorButtonRow(model: model, row: row)
+        CalculatorButtonRow(row: row)
       }
     }
   }

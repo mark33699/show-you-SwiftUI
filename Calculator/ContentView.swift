@@ -14,14 +14,19 @@ struct ContentView: View {
   
 //  @State private var brain = CalculatorBrain.left("0")
   @ObservedObject var model = CalculatorModel()
+  @State private var isShowingHistory = false
   
   var body: some View {
     VStack(spacing: 12) {
       
       Spacer()
       
-      Button("操作記錄 step: \(model.history.count)") {
-        print(model.history)
+      Button("操作記錄") {
+        isShowingHistory = true
+      }
+      .font(.title)
+      .sheet(isPresented: $isShowingHistory) {
+        HistoryView(model: model)
       }
       
       Text(model.brain.output)

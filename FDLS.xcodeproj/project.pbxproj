@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C48C6C428BD3683000B7EDC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C48C6C328BD3683000B7EDC /* Launch.storyboard */; };
 		3CA7EA8628ABFF940005C958 /* FDLSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8528ABFF940005C958 /* FDLSApp.swift */; };
 		3CA7EA8828ABFF940005C958 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8728ABFF940005C958 /* ContentView.swift */; };
 		3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8928ABFF950005C958 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C48C6C328BD3683000B7EDC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		3C7530FA28BD252500897085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CA7EA8228ABFF940005C958 /* FDLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA7EA8528ABFF940005C958 /* FDLSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLSApp.swift; sourceTree = "<group>"; };
 		3CA7EA8728ABFF940005C958 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 				3CA7EA8528ABFF940005C958 /* FDLSApp.swift */,
 				3CA7EA8728ABFF940005C958 /* ContentView.swift */,
 				3CA7EA8928ABFF950005C958 /* Assets.xcassets */,
+				3C7530FA28BD252500897085 /* Info.plist */,
+				3C48C6C328BD3683000B7EDC /* Launch.storyboard */,
 				3CA7EA8B28ABFF950005C958 /* Preview Content */,
 			);
 			path = FDLS;
@@ -127,6 +132,7 @@
 			files = (
 				3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */,
 				3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */,
+				3C48C6C428BD3683000B7EDC /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +278,9 @@
 				DEVELOPMENT_TEAM = 3TC7C2KN5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FDLS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -302,9 +308,9 @@
 				DEVELOPMENT_TEAM = 3TC7C2KN5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FDLS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

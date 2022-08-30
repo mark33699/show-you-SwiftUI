@@ -22,7 +22,8 @@ struct RootView: View {
       }
       .safeAreaInset(edge: .top) { layoutGuide }
       .safeAreaInset(edge: .bottom) { layoutGuide }
-      .navigationBarHidden(true) //for subView
+      .navigationBarTitleDisplayMode(.inline) //for next view
+      .navigationBarHidden(true) //not on NavigationView
     }
     
   }

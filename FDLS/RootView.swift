@@ -37,8 +37,9 @@ struct RootView: View {
   func getView(index: Int) -> some View {
     Group{
         switch index {
-          case 0: TextView()
-          case 1: ButtonView()
+          case 0: CommonView()
+          case 1: TextView()
+          case 2: ButtonView()
           default: Text("Coming Soon")
         }
     }

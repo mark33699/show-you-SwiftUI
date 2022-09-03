@@ -38,8 +38,10 @@ struct RootView: View {
     Group{
         switch index {
           case 0: CommonView()
-          case 1: TextView()
-          case 2: ButtonView()
+          case 1: StackView()
+          case 2: TextView()
+          case 3: ButtonView()
+          case 4: PickerView()
           default: Text("Coming Soon")
         }
     }

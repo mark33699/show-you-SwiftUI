@@ -29,7 +29,6 @@ struct PickerView: View {
 //    MenuPickerStyle(),
 //  ]
   
-  @State var isOn = true
   @State var selectedIndex = 0
   @State var sexagenaryIndex = 0
   @State var heavenlyStemIndex = 0
@@ -38,14 +37,6 @@ struct PickerView: View {
   var body: some View {
     ScrollView {
       VStack {
-        GroupBox("Toggle GroupBox") {
-          Toggle("Toggle", isOn: $isOn)
-          Toggle("Toggle with spring animation", isOn: $isOn.animation(.spring()))
-          HStack(spacing: 0) {
-            Text("Toggle independent")
-            Toggle("", isOn: $isOn).frame(width: 40)
-          }
-        }
         
         GroupBox("Picker GroupBox") {
           buildPicker(name: "default", style: .automatic)

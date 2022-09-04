@@ -42,7 +42,9 @@ struct RootView: View {
           case 2: TextView()
           case 3: ButtonView()
           case 4: PickerView()
-          case 5: OtherControlView()
+          case 5: DatePickerView()
+          case 6: OtherControlView()
+          case 7: AlertView()
           default: Text("Coming Soon")
         }
     }

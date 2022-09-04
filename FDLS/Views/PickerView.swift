@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct PickerView: View {
+  let 干支 = ["天干", "地支"]
+  let 天干 = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
+  let 地支 = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+  
   let iOSUiWays = [
     "coding",
     "Xib",
@@ -27,6 +31,9 @@ struct PickerView: View {
   
   @State var isOn = true
   @State var selectedIndex = 0
+  @State var sexagenaryIndex = 0
+  @State var heavenlyStemIndex = 0
+  @State var earthlyBranchIndex = 0
   
   var body: some View {
     ScrollView {
@@ -47,6 +54,45 @@ struct PickerView: View {
           buildPicker(name: "wheel", style: .wheel)
           buildPicker(name: "inline", style: .inline)
         }
+        
+        GroupBox("Multi Component Picker") {
+          VStack {
+            Text("2 Wheel")
+              .padding()
+              .frame(maxWidth: .infinity, alignment: .leading)
+            
+            HStack {
+              Picker("", selection: $sexagenaryIndex) {
+                ForEach(0 ..< 干支.count) { index in
+                  Text("\(干支[index])")
+                }
+              }
+              .pickerStyle(.wheel)
+              .frame(width: 100, alignment: .center)
+              .compositingGroup().clipped()
+              
+              Group {
+                if 干支[sexagenaryIndex] == 干支.first {
+                  Picker("", selection: $heavenlyStemIndex) {
+                    ForEach(0 ..< 天干.count) { index in
+                      Text("\(天干[index])")
+                    }
+                  }
+                } else if 干支[sexagenaryIndex] == 干支.last {
+                  Picker("", selection: $earthlyBranchIndex) {
+                    ForEach(0 ..< 地支.count) { index in
+                      Text("\(地支[index])")
+                    }
+                  }
+                }
+              }
+              .pickerStyle(.wheel)
+              .frame(width: 100, alignment: .center)
+              .compositingGroup().clipped()
+            }
+            
+          }.border(.red)
+        }
       }
     }
   }
@@ -56,8 +102,7 @@ struct PickerView: View {
       Text("\(name)")
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-      Picker("Piacker", selection: $selectedIndex) { //state is index
-        
+      Picker("Piacker", selection: $selectedIndex) { // state is index
 //        ❌
 //        ForEach(iOSUiWays, id: \.self) {
 //          Text($0) //so need use index

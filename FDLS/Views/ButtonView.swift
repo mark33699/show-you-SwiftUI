@@ -52,7 +52,7 @@ struct ButtonView: View {
           Text("organ")
             .foregroundColor(.blue)
             .frame(width: 100, height: 100).border(.red)
-            .background(.white)
+            .background(.background)
             .onTapGesture {
               organCount += 1
             }

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,8 +20,14 @@
                                 <rect key="frame" x="36.5" y="282.5" width="341" height="341"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Icons by Icons8&quot; is fine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-pe-YcU">
-                                <rect key="frame" x="115.5" y="669" width="183.5" height="21"/>
+                                <rect key="frame" x="115.5" y="623.5" width="183.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flutter Developer Learning SwiftUI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-Fm-Kkp">
+                                <rect key="frame" x="62.5" y="215" width="289" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,7 +37,9 @@
                         <constraints>
                             <constraint firstItem="WND-sc-QDC" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="4DQ-ah-Dmh"/>
                             <constraint firstItem="WND-sc-QDC" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="FlX-ZP-6WJ"/>
-                            <constraint firstItem="IeI-pe-YcU" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" multiplier="1.5" id="tWW-9m-yNP"/>
+                            <constraint firstItem="D7X-Fm-Kkp" firstAttribute="centerX" secondItem="WND-sc-QDC" secondAttribute="centerX" id="NDD-HO-VJJ"/>
+                            <constraint firstItem="IeI-pe-YcU" firstAttribute="top" secondItem="WND-sc-QDC" secondAttribute="bottom" id="oe6-tX-CqL"/>
+                            <constraint firstItem="D7X-Fm-Kkp" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" multiplier="0.5" id="va4-Nf-8WY"/>
                             <constraint firstItem="IeI-pe-YcU" firstAttribute="centerX" secondItem="WND-sc-QDC" secondAttribute="centerX" id="zVC-du-PYl"/>
                         </constraints>
                     </view>

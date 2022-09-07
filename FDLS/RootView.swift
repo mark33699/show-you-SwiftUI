@@ -8,49 +8,29 @@
 import SwiftUI
 
 struct RootView: View {
-  
   var body: some View {
-    
     NavigationView {
       List(lessons.indices, id: \.self) { index in
-          NavigationLink {
-            getView(index: index)
-          } label: {
-            //Text("\($0)") //應該是無法跨view builder
-            Text("\(lessons[index])")
-          }
+        let lesson = lessons[index]
+        NavigationLink {
+          lesson.view
+        } label: {
+          Text("\(lesson.name)")
+        }
       }
       .safeAreaInset(edge: .top) { layoutGuide }
       .safeAreaInset(edge: .bottom) { layoutGuide }
-      .navigationBarTitleDisplayMode(.inline) //for next view
-      .navigationBarHidden(true) //not on NavigationView
+      .navigationBarTitleDisplayMode(.inline) // for next view
+      .navigationBarHidden(true) // not on NavigationView
     }
-    
   }
-  
+
   var layoutGuide: some View {
-      Text("")
-        .frame(maxWidth: .infinity)
-        .background(Color(uiColor: .systemGroupedBackground))
+    Text("")
+      .frame(maxWidth: .infinity)
+      .background(Color(uiColor: .systemGroupedBackground))
   }
-  
-  func getView(index: Int) -> some View {
-    Group{
-        switch index {
-          case 0: CommonView()
-          case 1: StackView()
-          case 2: TextView()
-          case 3: ButtonView()
-          case 4: PickerView()
-          case 5: DatePickerView()
-          case 6: OtherPickerView()
-          case 7: OtherControlView()
-          case 8: AlertView()
-          default: Text("Coming Soon")
-        }
-    }
-  }
-  
+
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -59,14 +39,22 @@ struct ContentView_Previews: PreviewProvider {
   }
 }
 
-var lessons: [String] {
-  var lessons = [String]()
-  for i in 1...30 {
-    lessons.append("lesson \(i)")
-  }
-  return lessons
-}
-
 struct Lesson {
   let name: String
+  let view: AnyView
 }
+
+let lessons = [
+  Lesson(name: "常用Modifier", view: AnyView(CommonView())),
+  Lesson(name: "佈局", view: AnyView(StackView())),
+  Lesson(name: "顯示文字", view: AnyView(TextView())),
+  Lesson(name: "顯示圖片", view: AnyView(ImageView())),
+  Lesson(name: "按鈕", view: AnyView(ButtonView())),
+  Lesson(name: "挑選元件", view: AnyView(PickerView())),
+  Lesson(name: "日期挑選", view: AnyView(DatePickerView())),
+  Lesson(name: "圖片挑選", view: AnyView(EmptyView())),
+  Lesson(name: "文字輸入", view: AnyView(EmptyView())),
+  Lesson(name: "其他控件", view: AnyView(OtherControlView())),
+  Lesson(name: "對話框", view: AnyView(AlertView())),
+  Lesson(name: "顏色跟形狀", view: AnyView(EmptyView())),
+]

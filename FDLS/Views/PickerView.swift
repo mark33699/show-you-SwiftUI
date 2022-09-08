@@ -35,62 +35,73 @@ struct PickerView: View {
   @State var earthlyBranchIndex = 0
   
   var body: some View {
-    ScrollView {
-      VStack {
-        
-        GroupBox("Picker GroupBox") {
-          buildPicker(name: "default", style: .automatic)
-          buildPicker(name: "menu", style: .menu)
-          buildPicker(name: "segmented", style: .segmented)
-          buildPicker(name: "wheel", style: .wheel)
-          buildPicker(name: "inline", style: .inline)
-        }
-        
-        GroupBox("Multi Component Picker") {
-          VStack {
-            Text("2 Wheel")
-              .padding()
-              .frame(maxWidth: .infinity, alignment: .leading)
-            
-            HStack {
-              Picker("", selection: $sexagenaryIndex) {
-                ForEach(0 ..< 干支.count) { index in
-                  Text("\(干支[index])")
-                }
-              }
-              .pickerStyle(.wheel)
-              .frame(width: 100, alignment: .center)
-              .compositingGroup().clipped()
+    VStack {
+      ScrollView {
+        VStack {
+          
+          GroupBox("Pickers") {
+            buildPicker(name: "default", style: .automatic)
+            buildPicker(name: "menu", style: .menu)
+            buildPicker(name: "segmented", style: .segmented)
+            buildPicker(name: "wheel", style: .wheel)
+            buildPicker(name: "inline", style: .inline)
+          }
+          
+          GroupBox("Multi Component Picker") {
+            VStack {
+              Text("2 Wheel")
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
               
-              Group {
-                if 干支[sexagenaryIndex] == 干支.first {
-                  Picker("", selection: $heavenlyStemIndex) {
-                    ForEach(0 ..< 天干.count) { index in
-                      Text("\(天干[index])")
-                    }
+              HStack {
+                Picker("", selection: $sexagenaryIndex) {
+                  ForEach(0 ..< 干支.count) { index in
+                    Text("\(干支[index])")
                   }
-                } else if 干支[sexagenaryIndex] == 干支.last {
-                  Picker("", selection: $earthlyBranchIndex) {
-                    ForEach(0 ..< 地支.count) { index in
-                      Text("\(地支[index])")
+                }
+                .pickerStyle(.wheel)
+                .frame(width: 100, alignment: .center)
+                .compositingGroup().clipped()
+                
+                Group {
+                  if 干支[sexagenaryIndex] == 干支.first {
+                    Picker("", selection: $heavenlyStemIndex) {
+                      ForEach(0 ..< 天干.count) { index in
+                        Text("\(天干[index])")
+                      }
+                    }
+                  } else if 干支[sexagenaryIndex] == 干支.last {
+                    Picker("", selection: $earthlyBranchIndex) {
+                      ForEach(0 ..< 地支.count) { index in
+                        Text("\(地支[index])")
+                      }
                     }
                   }
                 }
+                .pickerStyle(.wheel)
+                .frame(width: 100, alignment: .center)
+                .compositingGroup().clipped()
               }
-              .pickerStyle(.wheel)
-              .frame(width: 100, alignment: .center)
-              .compositingGroup().clipped()
-            }
-            
-          }.border(.red)
+              
+            }.border(.red)
+          }
         }
       }
+      
+      List {
+        buildPickerInList(name: "default", style: .automatic)
+        buildPickerInList(name: "menu", style: .menu)
+        buildPickerInList(name: "segmented", style: .segmented)
+        buildPickerInList(name: "wheel", style: .wheel)
+        buildPickerInList(name: "inline", style: .inline)
+      }
+      
     }
   }
   
   func buildPicker<S: PickerStyle>(name: String, style: S) -> some View {
     VStack {
-      Text("\(name)")
+      Text("\(name) style")
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
       Picker("Piacker", selection: $selectedIndex) { // state is index
@@ -107,6 +118,26 @@ struct PickerView: View {
       }.pickerStyle(style)
     }.border(.red)
   }
+  
+  @ViewBuilder
+  func buildPickerInList<S: PickerStyle>(name: String, style: S) -> some View {
+    
+    let picker = Picker("\(name) style", selection: $selectedIndex) { 
+      ForEach(iOSUiWays.indices, id: \.self) {
+        Text("\(iOSUiWays[$0])")
+      }
+    }.pickerStyle(style)
+    
+    if style is InlinePickerStyle {
+      picker
+    } else {
+      Section {
+        picker
+      }
+    }
+    
+  }
+  
 }
 
 struct PickerView_Previews: PreviewProvider {

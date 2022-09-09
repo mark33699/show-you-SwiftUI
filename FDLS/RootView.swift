@@ -50,7 +50,7 @@ let lessons = [
   Lesson(name: "顯示文字", view: AnyView(TextView())),
   Lesson(name: "顯示圖片", view: AnyView(ImageView())),
   Lesson(name: "按鈕", view: AnyView(ButtonView())),
-  Lesson(name: "挑選元件", view: AnyView(PickerView())),
+  Lesson(name: "挑選器", view: AnyView(PickerView())),
   Lesson(name: "日期挑選", view: AnyView(DatePickerView())),
   Lesson(name: "圖片挑選", view: AnyView(EmptyView())),
   Lesson(name: "文字輸入", view: AnyView(EmptyView())),

@@ -24,7 +24,7 @@ struct OtherControlView: View {
         Toggle("Toggle", isOn: $isOn)
         Toggle("Toggle with spring animation", isOn: $isOn.animation(.spring()))
         HStack(spacing: 0) {
-          Text("Toggle independent")
+          Text("Toggle independent label")
           Toggle("", isOn: $isOn).frame(width: 40)
         }
       }

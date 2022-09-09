@@ -46,7 +46,7 @@ struct Lesson {
 
 let lessons = [
   Lesson(name: "常用Modifier", view: AnyView(CommonView())),
-  Lesson(name: "佈局", view: AnyView(StackView())),
+  Lesson(name: "佈局", view: AnyView(VStackView())),
   Lesson(name: "顯示文字", view: AnyView(TextView())),
   Lesson(name: "顯示圖片", view: AnyView(ImageView())),
   Lesson(name: "按鈕", view: AnyView(ButtonView())),

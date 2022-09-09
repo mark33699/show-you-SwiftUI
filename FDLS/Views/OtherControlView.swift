@@ -22,54 +22,59 @@ struct OtherControlView: View {
   
   var body: some View {
     VStack {
-      
-      GroupBox("Toggle GroupBox") {
-        Toggle("Toggle", isOn: $isOn)
-        Toggle("Toggle with spring animation", isOn: $isOn.animation(.spring()))
-        HStack(spacing: 0) {
-          Text("Toggle independent label")
-          Toggle("", isOn: $isOn).frame(width: 40)
-        }
-      }
-      
-      GroupBox("Slider GroupBox") {
-        Slider(value: $sliderValue, in: 0...100) {
-          Text("Label")
-        } minimumValueLabel: {
-          Text("min")
-        } maximumValueLabel: {
-          Text("max")
-        }
-
-        
+      ScrollView {
         VStack {
-          Slider(value: $sliderStepValue, in: 0...10, step: 2)
-          HStack {
-            ForEach(0..<11) {
-              if $0 % 2 == 0 {
-                Text("\($0)")
-              } else { // if without "else", then more one spacer, why???
-                Spacer()
-              }
-            }
-          }.padding(.horizontal, 4)
-        }
-      }
-      
-      GroupBox("Stepper GroupBox") {
-        Stepper("value: \(stepperValue)", value: $stepperValue, in: 0...100, step: 2)
-
-      }
-      
-      GroupBox("Context Menu GroupBox") {
-        Text("Long Press")
-          .padding()
-          .contextMenu {
-            Text("only display Text") //Text with system is not working
-            Button { } label: {
-              Text("or Button")
+          
+          GroupBox("Toggle GroupBox") {
+            Toggle("Toggle", isOn: $isOn)
+            Toggle("Toggle with spring animation", isOn: $isOn.animation(.spring()))
+            HStack(spacing: 0) {
+              Text("Toggle independent label")
+              Toggle("", isOn: $isOn).frame(width: 40)
             }
           }
+          
+          GroupBox("Slider GroupBox") {
+            Slider(value: $sliderValue, in: 0...100) {
+              Text("Label")
+            } minimumValueLabel: {
+              Text("min")
+            } maximumValueLabel: {
+              Text("max")
+            }
+
+            
+            VStack {
+              Slider(value: $sliderStepValue, in: 0...10, step: 2)
+              HStack {
+                ForEach(0..<11) {
+                  if $0 % 2 == 0 {
+                    Text("\($0)")
+                  } else { // if without "else", then more one spacer, why???
+                    Spacer()
+                  }
+                }
+              }.padding(.horizontal, 4)
+            }
+          }
+          
+          GroupBox("Stepper GroupBox") {
+            Stepper("value: \(stepperValue)", value: $stepperValue, in: 0...100, step: 2)
+
+          }
+          
+          GroupBox("Context Menu GroupBox") {
+            Text("Long Press")
+              .padding()
+              .contextMenu {
+                Text("only display Text") //Text with system is not working
+                Button { } label: {
+                  Text("or Button")
+                }
+              }
+          }
+          
+        }
       }
       
       GroupBox("Disclosure GroupBox") {
@@ -98,8 +103,7 @@ struct OtherControlView: View {
             }
           }
         }
-      }
-      
+      }.frame(height: 300)
     }
     
   }

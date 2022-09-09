@@ -33,17 +33,17 @@ struct VStackView: View {
         Color.green
       }
 
-      Text("VStack alignment is still trailing") // why be center...
+      Text("VStack alignment is still trailing") // why still be center...
       VStack(alignment: .trailing) {
         Color.red.frame(width: 100)
         Color.yellow.frame(width: 100)
         Color.green.frame(width: 100)
-      }.frame(maxWidth: .infinity)
+      }.frame(maxWidth: .infinity).border(.red)
 
-      Text("VStack alignment trailing by HStack") // workaround?...
+      Text("VStack alignment trailing by HStack")
       HStack {
         Spacer()
-        VStack(alignment: .trailing) {
+        VStack() {
           Color.red.frame(width: 100)
           Color.yellow.frame(width: 100)
           Color.green.frame(width: 100)

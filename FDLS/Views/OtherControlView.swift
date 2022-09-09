@@ -15,6 +15,9 @@ struct OtherControlView: View {
   ]
   
   @State var isOn = true
+  @State var sliderValue = 50.0
+  @State var sliderStepValue = 50.0
+  @State var stepperValue = 50
   @State var selectedFeatures = ["Female", "AB"]
   
   var body: some View {
@@ -30,11 +33,43 @@ struct OtherControlView: View {
       }
       
       GroupBox("Slider GroupBox") {
+        Slider(value: $sliderValue, in: 0...100) {
+          Text("Label")
+        } minimumValueLabel: {
+          Text("min")
+        } maximumValueLabel: {
+          Text("max")
+        }
+
         
+        VStack {
+          Slider(value: $sliderStepValue, in: 0...10, step: 2)
+          HStack {
+            ForEach(0..<11) {
+              if $0 % 2 == 0 {
+                Text("\($0)")
+              } else { // if without "else", then more one spacer, why???
+                Spacer()
+              }
+            }
+          }.padding(.horizontal, 4)
+        }
       }
       
       GroupBox("Stepper GroupBox") {
-        
+        Stepper("value: \(stepperValue)", value: $stepperValue, in: 0...100, step: 2)
+
+      }
+      
+      GroupBox("Context Menu GroupBox") {
+        Text("Long Press")
+          .padding()
+          .contextMenu {
+            Text("only display Text") //Text with system is not working
+            Button { } label: {
+              Text("or Button")
+            }
+          }
       }
       
       GroupBox("Disclosure GroupBox") {

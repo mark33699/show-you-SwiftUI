@@ -53,7 +53,7 @@ let lessons = [
   Lesson(name: "挑選器", view: AnyView(PickerView())),
   Lesson(name: "日期挑選", view: AnyView(DatePickerView())),
   Lesson(name: "圖片挑選", view: AnyView(EmptyView())),
-  Lesson(name: "文字輸入", view: AnyView(EmptyView())),
+  Lesson(name: "文字輸入", view: AnyView(TextInputView())),
   Lesson(name: "其他控件", view: AnyView(OtherControlView())),
   Lesson(name: "對話框", view: AnyView(AlertView())),
   Lesson(name: "顏色跟形狀", view: AnyView(EmptyView())),

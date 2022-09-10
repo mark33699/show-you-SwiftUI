@@ -23,6 +23,7 @@
 		3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */; };
 		3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE06CEC28BD967C00DE43C8 /* TextView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
+		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CE06CEC28BD967C00DE43C8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
+		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3C713D9328C51946006259A4 /* OtherControlView.swift */,
 				3C713D9728C52B29006259A4 /* AlertView.swift */,
 				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
+				A0B0F8C228CD055900835342 /* TextInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				3C8B7AA528C90188001CDFCF /* ImageView.swift in Sources */,
 				3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */,
+				A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */,
 				3CA7EA8828ABFF940005C958 /* RootView.swift in Sources */,
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
 				3C713D9828C52B29006259A4 /* AlertView.swift in Sources */,

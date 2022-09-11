@@ -24,7 +24,7 @@ struct TextInputView: View {
     ZStack {
       bgColor.onTapGesture {
         print("Tap BG")
-        isFieldFocused.toggle()
+        isEditorFocused.toggle()
       }
       VStack {
         Spacer()
@@ -36,19 +36,23 @@ struct TextInputView: View {
               }
               .focused($isFieldFocused)
               .alert(isPresented: $isShowAlert) {
-                Alert(title: Text("sent"))
+                Alert(title: Text("「\(input)」sent"))
+              }
+              .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    isFieldFocused = true
+                 }
               }
             Divider()
           }
 
           TextField("plain style", text: $input)
             .textFieldStyle(.plain)
+            .keyboardType(.numberPad)
 
           TextField("rounded border style", text: $input)
             .textFieldStyle(.roundedBorder)
           // .border(.red) //not rounded
-
-          Spacer().frame(height: 24)
 
           SecureField("secure field", text: $input)
         }
@@ -61,7 +65,7 @@ struct TextInputView: View {
 //              if isEditorFocused { //add condition will never display
                 Spacer() // even breakpoint stop here
                 Button("Done") {
-                  isEditorFocused = false
+                  isFieldFocused = false
                 }
 //              }
             }

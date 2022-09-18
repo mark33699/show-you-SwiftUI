@@ -50,7 +50,7 @@ struct OtherControlView: View {
                 ForEach(0..<11) {
                   if $0 % 2 == 0 {
                     Text("\($0)")
-                  } else { // if without "else", then more one spacer, why???
+                  } else {
                     Spacer()
                   }
                 }

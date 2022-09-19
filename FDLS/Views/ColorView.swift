@@ -45,7 +45,7 @@ struct ColorView: View {
       }
       
       GroupBox("UIColor") {
-        Color(UIColor.magenta)
+        Color(UIColor.magenta) // 1.0, 0.0, 1.0 RGB
         Color(UIColor.tintColor)
       }
       

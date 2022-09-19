@@ -9,32 +9,37 @@ import SwiftUI
 
 struct OtherView: View {
   @State var selectedIndex = 0
-  
+
   var body: some View {
-    Menu("More Button") {
-      Button("Option A") {}
-      Button("Option B") {}
-      Button("Option C") {}
-      Menu("More & More") {
-        Button("Option X") {}
-        Button("Option Y") {}
-        Button("Option Z") {}
-      }
-    }
+
+    GroupBox{
+      Color.primary
+      Color.secondary
+    }.groupBoxStyle(CustomGroupBoxStyle())
     
-    Picker("Piacker", selection: $selectedIndex) {
-      Button("Option A"){}
-      Button("Option B"){}
-      Button("Option C"){}
-    }
-      
-    Text("Long Press")
-      .padding()
-      .contextMenu {
-        Button("Option A") {}
-        Button("Option B") {}
-        Button("Option C") {}
-      }
+//    let image = Image("AppLaunch-1").resizable().frame(width: 30, height: 30)
+//    GroupBox {
+//      Button {
+//        // action
+//      } label: {
+//        image
+//      }
+//
+//      Label {
+//        Text("lbl")
+//      } icon: {
+//        image
+//      }
+//
+//      GroupBox {
+//        Color.yellow
+//      } label: {
+//        image
+//      }
+//
+//    } label: {
+//      Label("Color", systemImage: "swift")
+//    }
     
     
   }
@@ -43,5 +48,15 @@ struct OtherView: View {
 struct OtherView_Previews: PreviewProvider {
   static var previews: some View {
     OtherView()
+  }
+}
+
+struct CustomGroupBoxStyle: GroupBoxStyle {
+  func makeBody(configuration: Configuration) -> some View {
+    HStack(spacing: 0, content: {
+      configuration.content
+        .padding(2)
+        .border(.blue)
+    })
   }
 }

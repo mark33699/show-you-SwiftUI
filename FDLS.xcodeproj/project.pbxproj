@@ -23,6 +23,7 @@
 		3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8928ABFF950005C958 /* Assets.xcassets */; };
 		3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */; };
 		3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE06CEC28BD967C00DE43C8 /* TextView.swift */; };
+		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		3CA7EA8928ABFF950005C958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CE06CEC28BD967C00DE43C8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
 				A0B0F8C228CD055900835342 /* TextInputView.swift */,
 				3C8DF9C328CE5A0A009058FA /* OtherView.swift */,
+				3CE40F6D28D823AD00F1F945 /* ColorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */,
 				A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */,
 				3CA7EA8828ABFF940005C958 /* RootView.swift in Sources */,
+				3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */,
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
 				3C713D9828C52B29006259A4 /* AlertView.swift in Sources */,
 				3C70898C28BDE2E400B6A3D8 /* ButtonView.swift in Sources */,

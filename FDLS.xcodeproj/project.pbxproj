@@ -14,6 +14,7 @@
 		3C713D9628C529B8006259A4 /* OtherPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9528C529B8006259A4 /* OtherPickerView.swift */; };
 		3C713D9828C52B29006259A4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9728C52B29006259A4 /* AlertView.swift */; };
 		3C810BE028D8A2C300EFA209 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C810BDF28D8A2C300EFA209 /* ShapeView.swift */; };
+		3C810BE228DA06D300EFA209 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C810BE128DA06D300EFA209 /* ImagePickerView.swift */; };
 		3C8A995228BFB536002B776A /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A995128BFB536002B776A /* CommonView.swift */; };
 		3C8A995428C351A7002B776A /* VStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A995328C351A7002B776A /* VStackView.swift */; };
 		3C8A995628C3645C002B776A /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A995528C3645C002B776A /* PickerView.swift */; };
@@ -38,6 +39,7 @@
 		3C713D9728C52B29006259A4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		3C7530FA28BD252500897085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C810BDF28D8A2C300EFA209 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		3C810BE128DA06D300EFA209 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		3C8A995128BFB536002B776A /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		3C8A995328C351A7002B776A /* VStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackView.swift; sourceTree = "<group>"; };
 		3C8A995528C3645C002B776A /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
@@ -106,21 +108,22 @@
 		3CE06CEB28BD966300DE43C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3C8A995128BFB536002B776A /* CommonView.swift */,
-				3CE06CEC28BD967C00DE43C8 /* TextView.swift */,
+				3C713D9728C52B29006259A4 /* AlertView.swift */,
 				3C70898B28BDE2E400B6A3D8 /* ButtonView.swift */,
+				3CE40F6D28D823AD00F1F945 /* ColorView.swift */,
+				3C8A995128BFB536002B776A /* CommonView.swift */,
+				3C713D9128C4827B006259A4 /* DatePickerView.swift */,
+				3C810BE128DA06D300EFA209 /* ImagePickerView.swift */,
+				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
+				3C713D9328C51946006259A4 /* OtherControlView.swift */,
+				3C713D9528C529B8006259A4 /* OtherPickerView.swift */,
+				3C8DF9C328CE5A0A009058FA /* OtherView.swift */,
+				3C8A995528C3645C002B776A /* PickerView.swift */,
+				3C810BDF28D8A2C300EFA209 /* ShapeView.swift */,
+				A0B0F8C228CD055900835342 /* TextInputView.swift */,
+				3CE06CEC28BD967C00DE43C8 /* TextView.swift */,
 				3C8A995328C351A7002B776A /* VStackView.swift */,
 				A027FFEA28CB952F00D02ACB /* ZStackView.swift */,
-				3C8A995528C3645C002B776A /* PickerView.swift */,
-				3C713D9128C4827B006259A4 /* DatePickerView.swift */,
-				3C713D9528C529B8006259A4 /* OtherPickerView.swift */,
-				3C713D9328C51946006259A4 /* OtherControlView.swift */,
-				3C713D9728C52B29006259A4 /* AlertView.swift */,
-				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
-				A0B0F8C228CD055900835342 /* TextInputView.swift */,
-				3C8DF9C328CE5A0A009058FA /* OtherView.swift */,
-				3CE40F6D28D823AD00F1F945 /* ColorView.swift */,
-				3C810BDF28D8A2C300EFA209 /* ShapeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */,
 				A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */,
 				3CA7EA8828ABFF940005C958 /* RootView.swift in Sources */,
+				3C810BE228DA06D300EFA209 /* ImagePickerView.swift in Sources */,
 				3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */,
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
 				3C713D9828C52B29006259A4 /* AlertView.swift in Sources */,

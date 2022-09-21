@@ -32,7 +32,7 @@ struct ShapeView: View {
     }
   }
 
-  func decorateShape<S: Shape>(shape: S) -> some View {
+  func decorateShape<S: InsettableShape>(shape: S) -> some View {
     var gradient: AnyView
 
     switch shape {
@@ -56,7 +56,8 @@ struct ShapeView: View {
     }
 
     return shape
-      .stroke(Color.black, lineWidth: 3)
+//      .strokeBorder(Color.black, lineWidth: 3) //inside only for InsettableShape
+      .stroke(Color.black, lineWidth: 3) //outside
       .background(gradient.clipShape(shape))
       .frame(width: 160.0, height: 90.0)
   }

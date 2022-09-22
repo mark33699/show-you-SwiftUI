@@ -16,13 +16,15 @@ struct ImagePickerView: View {
   
   var body: some View {
     
+    let length = UIScreen.main.bounds.width - 32
+    
     Button {
       showingImagePicker = true
     } label: {
       currentImahg
         .resizable()
         .scaledToFill()
-        .frame(width: UIScreen.main.bounds.width - 32)
+        .frame(width: length, height: length)
         .clipShape(Circle())
         .overlay(
           Circle()

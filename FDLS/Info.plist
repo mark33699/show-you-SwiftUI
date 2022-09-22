@@ -2,22 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UILaunchStoryboardName</key>
-	<string>Launch</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
 		<string>AppLaunchColor</string>
-		<key>UIImageRespectsSafeAreaInsets</key>
-		<false/>
 		<key>UIImageName</key>
 		<string>AppLaunch-1</string>
-		<key>UIToolbar</key>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<false/>
+		<key>UINavigationBar</key>
 		<dict>
 			<key>UIImageName</key>
 			<string>black</string>
 		</dict>
-		<key>UINavigationBar</key>
+		<key>UIToolbar</key>
 		<dict>
 			<key>UIImageName</key>
 			<string>black</string>

@@ -8,20 +8,29 @@
 import PhotosUI
 import SwiftUI
 
+enum PictureSource {
+  case camera
+  case image
+  case album
+  case photo
+}
+
 struct ImagePickerView: View {
   
-  @State private var currentImahg = Image("AppLaunch")
+  @State private var currentImage = Image("AppLaunch")
   @State private var selectedImage: UIImage?
-  @State private var showingImagePicker = false
+  @State private var showingPicker = false
+  @State private var showingDialog = false
+  @State private var pictureSource: PictureSource = .camera
   
   var body: some View {
     
     let length = UIScreen.main.bounds.width - 32
     
     Button {
-      showingImagePicker = true
+      showingDialog = true
     } label: {
-      currentImahg
+      currentImage
         .resizable()
         .scaledToFill()
         .frame(width: length, height: length)
@@ -30,8 +39,36 @@ struct ImagePickerView: View {
           Circle()
             .strokeBorder(.black, lineWidth: 10)
         )
-    }.sheet(isPresented: $showingImagePicker) {
-      ImagePicker(image: $selectedImage)
+    }.confirmationDialog("選擇照片來源", isPresented: $showingDialog, actions: {
+      Button("相機") {
+        pictureSource = .camera
+        showingPicker = true
+      }
+      Button("傳統選擇器：相片") {
+        pictureSource = .image
+        showingPicker = true
+      }
+      Button("傳統選擇器：相簿") {
+        pictureSource = .album
+        showingPicker = true
+      }
+      Button("摩登選擇器") {
+        pictureSource = .photo
+        showingPicker = true
+      }
+      
+    }).sheet(isPresented: $showingPicker) {
+      switch pictureSource {
+      case .camera:
+        ImagePicker(image: $selectedImage, sourceType: .camera)
+      case .image:
+        ImagePicker(image: $selectedImage, sourceType: .photoLibrary)
+      case .album:
+        ImagePicker(image: $selectedImage, sourceType: .savedPhotosAlbum)
+      case .photo:
+        PhotoPicker(image: $selectedImage)
+      }
+      
     }.onChange(of: selectedImage) { newValue in
       loadImage()
     }
@@ -41,7 +78,7 @@ struct ImagePickerView: View {
   
   func loadImage() {
     guard let selectedImage = selectedImage else { return }
-    currentImahg = Image(uiImage: selectedImage)
+    currentImage = Image(uiImage: selectedImage)
   }
   
 }
@@ -52,18 +89,19 @@ struct ImagePickerView_Previews: PreviewProvider {
   }
 }
 
-struct ImagePicker: UIViewControllerRepresentable { // 1
+struct PhotoPicker: UIViewControllerRepresentable { // 1
   @Binding var image: UIImage?
   
   func makeUIViewController(context: Context) -> PHPickerViewController { // 2
     print("makeUIViewController")
     var cfg = PHPickerConfiguration()
     cfg.filter = .images
-    let imagePickerVC = PHPickerViewController(configuration: cfg)
-    imagePickerVC.delegate = context.coordinator // 5
-    return imagePickerVC
+    let photoPickerVC = PHPickerViewController(configuration: cfg)
+    photoPickerVC.delegate = context.coordinator // 5
+    return photoPickerVC
   }
   
+  //while state changed
   func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
     print("updateUIViewController")
   }
@@ -73,9 +111,9 @@ struct ImagePicker: UIViewControllerRepresentable { // 1
   }
  
   class Coordinator: NSObject, PHPickerViewControllerDelegate { // 3
-    let parent: ImagePicker
+    let parent: PhotoPicker
 
-    init(_ parent: ImagePicker) {
+    init(_ parent: PhotoPicker) {
       self.parent = parent
     }
 
@@ -91,4 +129,44 @@ struct ImagePicker: UIViewControllerRepresentable { // 1
       }
     }
   }
+}
+
+struct ImagePicker: UIViewControllerRepresentable {
+  
+  @Binding var image: UIImage?
+  var sourceType: UIImagePickerController.SourceType
+  
+  func makeUIViewController(context: Context) -> UIImagePickerController {
+    print("sourceType: \(sourceType.rawValue)")
+    let imagePickerVC = UIImagePickerController()
+    imagePickerVC.sourceType = sourceType
+    imagePickerVC.allowsEditing = true
+    imagePickerVC.delegate = context.coordinator
+    return imagePickerVC
+  }
+  
+  func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+  
+  func makeCoordinator() -> Coordinator {
+    Coordinator(self)
+  }
+ 
+  class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    let parent: ImagePicker
+
+    init(_ parent: ImagePicker) {
+      self.parent = parent
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      picker.dismiss(animated: true)
+      
+      if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+        parent.image = image
+      }
+      
+    }
+    
+  }
+  
 }

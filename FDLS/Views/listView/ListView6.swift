@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ListView6: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State var mutableListItems = listItems
+
+  var body: some View {
+    List {
+      ForEach(mutableListItems.indices, id: \.self) { index in
+        mutableListItems[index]
+      }.onDelete { indexSet in
+        mutableListItems.remove(atOffsets: indexSet)
+      }.onMove { from, to in
+        mutableListItems.move(fromOffsets: from, toOffset: to)
+      }
     }
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        EditButton()
+      }
+    }
+  }
 }
 
 struct ListView6_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView6()
-    }
+  static var previews: some View {
+    ListView6()
+  }
 }

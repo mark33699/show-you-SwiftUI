@@ -53,10 +53,10 @@ let navigationItems = [
   NavigationItem(title: "List with section", color: .systemGreen, listView: AnyView(ListView3())),
   
   NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView4())),
-  NavigationItem(title: "List with Edit Button", color: .systemCyan, listView: AnyView(ListView5())),
-  NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView6())),
+  NavigationItem(title: "List with swipe action", color: .systemCyan, listView: AnyView(ListView5())),
+  NavigationItem(title: "List with edit button", color: .systemOrange, listView: AnyView(ListView6())),
   
-  NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView7())),
+  NavigationItem(title: "List with selection", color: .systemPurple, listView: AnyView(ListView7())),
   NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView8())),
   NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView9())),
 ]

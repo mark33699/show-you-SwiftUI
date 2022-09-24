@@ -12,23 +12,23 @@ struct ListView4: View {
   // Protocol 'PickerStyle' can only be used as a generic constraint because it has Self or associated type requirements
   // 幹，又是這個，真的很廢，東卡西卡
 //  @State var currentStyle: ListStyle = DefaultListStyle()
-  @State var currentStyle: ListStyleType = .automatic
+  @State var currentStyle: ListStyleType = .plain
   
   var body: some View {
     
     let list = List {
       Section("top") {
-        listItems[0]
-        listItems[1]
-        listItems[2]
+        listItems[0].listRowBackground(Color.red)
+        listItems[1].listRowBackground(Color.yellow)
+        listItems[2].listRowBackground(Color.green)
       }
       Section("middle") {
-        listItems[7]
-        listItems[8]
-        listItems[3]
+        listItems[7].listRowSeparatorTint(.red)
+        listItems[8].listRowSeparatorTint(.yellow)
+        listItems[3].listRowSeparatorTint(.green)
       }
       Section("Bottom") {
-        listItems[6]
+        listItems[6].listRowSeparator(.hidden)
         listItems[5]
         listItems[4]
       }

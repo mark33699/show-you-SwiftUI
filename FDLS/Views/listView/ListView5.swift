@@ -10,6 +10,7 @@ import SwiftUI
 struct ListView5: View {
   
   @State var showingSayHi = false
+  @State var showingSayHello = false
   @State var isBookmarkList = Array(repeating: false, count: 9)
   
     var body: some View {
@@ -22,6 +23,15 @@ struct ListView5: View {
               } label: {
                 Text("Say Hi")
               }
+              .tint(.yellow)
+              
+              Button {
+                showingSayHello = true
+              } label: {
+                Text("Say Hello")
+              }
+              .tint(.blue)
+              
             }
             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
               Button {
@@ -34,6 +44,10 @@ struct ListView5: View {
             .alert(isPresented: $showingSayHi) {
                 Alert(title: Text("Hi"))
             }
+            
+        }
+        .alert(isPresented: $showingSayHello) {
+            Alert(title: Text("Hello"))
         }
       
     }

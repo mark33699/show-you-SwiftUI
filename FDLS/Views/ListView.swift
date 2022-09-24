@@ -49,16 +49,16 @@ struct NavigationItem {
 
 let navigationItems = [
   NavigationItem(title: "List with static data", color: .systemRed, listView: AnyView(ListView1())),
-  NavigationItem(title: "List with dynemic data", color: .systemYellow, listView: AnyView(ListView2())),
-  NavigationItem(title: "List with section", color: .systemGreen, listView: AnyView(ListView3())),
+  NavigationItem(title: "List with dynemic data", color: .systemOrange, listView: AnyView(ListView2())),
+  NavigationItem(title: "List with section", color: .systemYellow, listView: AnyView(ListView3())),
   
-  NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView4())),
-  NavigationItem(title: "List with swipe action", color: .systemCyan, listView: AnyView(ListView5())),
-  NavigationItem(title: "List with edit button", color: .systemOrange, listView: AnyView(ListView6())),
+  NavigationItem(title: "List with switch style", color: .systemMint, listView: AnyView(ListView4())),
+  NavigationItem(title: "List with swipe action", color: .systemGreen, listView: AnyView(ListView5())),
+  NavigationItem(title: "List with edit button", color: .systemCyan, listView: AnyView(ListView6())),
   
-  NavigationItem(title: "List with selection", color: .systemPurple, listView: AnyView(ListView7())),
-  NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView8())),
-  NavigationItem(title: "List by style", color: .systemBlue, listView: AnyView(ListView9())),
+  NavigationItem(title: "List with selection", color: .systemBlue, listView: AnyView(ListView7())),
+  NavigationItem(title: "List with search & refreash", color: .systemIndigo, listView: AnyView(ListView8())),
+  NavigationItem(title: "List with customize cell", color: .systemPurple, listView: AnyView(ListView9())),
 ]
 
 let listItems = [

@@ -14,6 +14,10 @@ struct ListView4: View {
 //  @State var currentStyle: ListStyle = DefaultListStyle()
   @State var currentStyle: ListStyleType = .plain
   
+  init() {
+    UITableView.appearance().separatorInset = UIEdgeInsets.zero //not working @@
+  }
+  
   var body: some View {
     
     let list = List {
@@ -29,8 +33,8 @@ struct ListView4: View {
       }
       Section("Bottom") {
         listItems[6].listRowSeparator(.hidden)
-        listItems[5]
-        listItems[4]
+        listItems[5].listRowSeparator(.hidden)
+        listItems[4].listRowSeparator(.hidden)
       }
     }
     

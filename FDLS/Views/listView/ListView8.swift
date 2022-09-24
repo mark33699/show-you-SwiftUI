@@ -36,9 +36,27 @@ struct ListView8: View {
     }
     .searchable(text: $searchKeyword,
                 placement: .navigationBarDrawer(displayMode: .always),
-                prompt: "Who are you?")
+                prompt: "Who are you?") {
+      
+      Button {
+        searchKeyword = "Mark"
+      } label: {
+        Text("你就是Mark對吧😏")
+          .searchCompletion("Mark")
+      }
+
+      Button {
+        searchKeyword = "Peter"
+      } label: {
+        Text("還是Peter🤔")
+          .searchCompletion("Peter")
+      }
+      
+    }
     .refreshable {
-      showingLoaded = true
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        showingLoaded = true
+      }
     }
     .alert(isPresented: $showingLoaded) {
       Alert(title: Text("Reloaded"))

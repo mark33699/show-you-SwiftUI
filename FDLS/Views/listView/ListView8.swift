@@ -40,7 +40,7 @@ struct ListView8: View {
     .refreshable {
       showingLoaded = true
     }
-    alert(isPresented: $showingLoaded) {
+    .alert(isPresented: $showingLoaded) {
       Alert(title: Text("Reloaded"))
     }
     

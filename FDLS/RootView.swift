@@ -61,5 +61,6 @@ let lessons = [
   
   Lesson(name: "佈局", view: AnyView(LayoutView())), //16
   Lesson(name: "圖片挑選", view: AnyView(ImagePickerView())), //17
-  Lesson(name: "列表", view: AnyView(ListView())), //18
+  Lesson(name: "滾動", view: AnyView(ScrollableView())), //18
+  Lesson(name: "列表", view: AnyView(ListView())), //19
 ]

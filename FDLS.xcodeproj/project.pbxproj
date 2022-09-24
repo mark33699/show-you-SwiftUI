@@ -39,6 +39,7 @@
 		3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE06CEC28BD967C00DE43C8 /* TextView.swift */; };
 		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
+		A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051D99128DF7A0500D26BE0 /* ScrollableView.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		3CE06CEC28BD967C00DE43C8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
+		A051D99128DF7A0500D26BE0 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				3C713D9528C529B8006259A4 /* OtherPickerView.swift */,
 				3C8DF9C328CE5A0A009058FA /* OtherView.swift */,
 				3C8A995528C3645C002B776A /* PickerView.swift */,
+				A051D99128DF7A0500D26BE0 /* ScrollableView.swift */,
 				3C810BDF28D8A2C300EFA209 /* ShapeView.swift */,
 				A0B0F8C228CD055900835342 /* TextInputView.swift */,
 				3CE06CEC28BD967C00DE43C8 /* TextView.swift */,
@@ -258,6 +261,7 @@
 				3C70898C28BDE2E400B6A3D8 /* ButtonView.swift in Sources */,
 				3C6B61D228DDEE4200F31A41 /* ListView4.swift in Sources */,
 				3CA7EA8628ABFF940005C958 /* FDLSApp.swift in Sources */,
+				A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */,
 				3C6B61D028DDEE3D00F31A41 /* ListView3.swift in Sources */,
 				3C713D9428C51946006259A4 /* OtherControlView.swift in Sources */,
 				3C6B61D628DDEE5A00F31A41 /* ListView6.swift in Sources */,

@@ -40,16 +40,16 @@ struct LayoutView: View {
         Spacer()
         Toggle("", isOn: $isFullScreen).labelsHidden().tint(.brown)
         
+        HStack(spacing: 0) {
+          Color.primary.frame(minWidth: 10)
+          Color.secondary.layoutPriority(9999)
+        }
+        
         GeometryReader { proxy in
           HStack(spacing: 0) {
             Color.primary.frame(width: proxy.size.width / 3 * 2)
             Color.secondary
           }
-        }
-        
-        HStack(spacing: 0) {
-          Color.primary.frame(minWidth: 10)
-          Color.secondary.layoutPriority(9999)
         }
           
         VStack { // parent

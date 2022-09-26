@@ -19,7 +19,7 @@ struct ColorView: View {
   let iOS15Colors: [Color] = [
     .cyan, .teal, .mint, .indigo, .brown
   ]
-  let dColors: [Color] = [
+  let textColors: [Color] = [
     .primary, .secondary
   ]
 
@@ -34,7 +34,7 @@ struct ColorView: View {
         }
       }
       
-      let otherColors = iOS15Colors + dColors
+      let otherColors = iOS15Colors + textColors
       HStack(spacing: 0) {
         ForEach(otherColors.toColorModel(), id: \.self) { colorModel in
           VStack {

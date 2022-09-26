@@ -130,12 +130,12 @@
 			children = (
 				3CA7EA8528ABFF940005C958 /* FDLSApp.swift */,
 				3CA7EA8728ABFF940005C958 /* RootView.swift */,
+				3C7A778628DB7F72001AC918 /* LabView.swift */,
 				3CE06CEB28BD966300DE43C8 /* Views */,
 				3CA7EA8928ABFF950005C958 /* Assets.xcassets */,
 				3C7530FA28BD252500897085 /* Info.plist */,
 				3C48C6C328BD3683000B7EDC /* Launch.storyboard */,
 				3CA7EA8B28ABFF950005C958 /* Preview Content */,
-				3C7A778628DB7F72001AC918 /* LabView.swift */,
 			);
 			path = FDLS;
 			sourceTree = "<group>";
@@ -416,6 +416,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -450,6 +451,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

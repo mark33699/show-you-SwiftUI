@@ -15,30 +15,28 @@ struct ListView9: View {
     NavigationView {
       List {
         
-        //cell
-        ZStack {
-          
-          Color.brown
-            .onTapGesture {
-              showAlertA = true
-            }
-          
-          HStack {
-            Text("GOGOGO")
-            
-            Spacer()
-            
-            Text("DOWNLOAD")
-              .padding()
-              .background(.gray)
-              .onTapGesture {
-                showAlertB = true
+        ButtonCell(showAlertA: $showAlertA, showAlertB: $showAlertB)
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+          HStack(spacing: 0) {
+            ForEach(0..<20) { index in
+              NavigationLink {
+                Text("New Page\(index+1)")
+              } label: {
+                Color(uiColor: .secondarySystemBackground)
+                  .frame(width: 160, height: 90)
+                  .clipShape(RoundedRectangle(cornerRadius: 8))
+                  .shadow(color: .black, radius: 2, x: 2, y: 2)
+                  .padding(.horizontal, 8)
+                  .padding(.vertical, 16)
+                  .overlay(Text("Card \(index+1)"))
               }
-            
+
+            }
           }
         }
-        .frame(maxWidth: .infinity, minHeight: 100)
-        .onTapGesture {}
+        .padding(.horizontal, 8)
+        .background(.brown)
         .listRowSeparator(.hidden)
         
       } //List
@@ -59,5 +57,54 @@ struct ListView9: View {
 struct ListView9_Previews: PreviewProvider {
   static var previews: some View {
     ListView9()
+  }
+}
+
+struct ButtonCell: View {
+  
+  @Binding var showAlertA: Bool
+  @Binding var showAlertB: Bool
+  
+  var body: some View {
+    ZStack {
+      
+      //ok
+      Color.brown
+        .onTapGesture {
+          showAlertA = true
+        }
+      
+      //ng
+      //          Button {
+      //            showAlertA = true
+      //          } label: {
+      //            Color.brown
+      //          }
+      
+      //ng
+      //          NavigationLink {
+      //            Text("New Page")
+      //          } label: {
+      //            Color.brown
+      //          }
+      
+      HStack {
+        Text("GOGOGO").padding()
+        
+        Spacer()
+        
+        Text("DOWNLOAD")
+          .padding()
+          .background(.gray)
+          .padding()
+          .onTapGesture {
+            showAlertB = true
+          }
+        
+      }
+    }
+    .frame(maxWidth: .infinity, minHeight: 100)
+    .onTapGesture {}
+    .listRowSeparator(.hidden)
   }
 }

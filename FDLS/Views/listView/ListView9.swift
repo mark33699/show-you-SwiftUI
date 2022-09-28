@@ -8,46 +8,51 @@
 import SwiftUI
 
 struct ListView9: View {
-  
-  @State var showAlert = false
-  
+  @State var showAlertA = false
+  @State var showAlertB = false
+
   var body: some View {
     NavigationView {
-      
-    List {
-      NavigationLink {
-        EmptyView()
-      } label: {
-        Text("GOGOGO")
+      List {
+        
+        //cell
+        ZStack {
+          
+          Color.brown
+            .onTapGesture {
+              showAlertA = true
+            }
+          
+          HStack {
+            Text("GOGOGO")
+            
+            Spacer()
+            
+            Text("DOWNLOAD")
+              .padding()
+              .background(.gray)
+              .onTapGesture {
+                showAlertB = true
+              }
+            
+          }
+        }
+        .frame(maxWidth: .infinity, minHeight: 100)
+        .onTapGesture {}
+        .listRowSeparator(.hidden)
+        
+      } //List
+      .listStyle(.plain)
+      .alert(isPresented: $showAlertA) {
+        Alert(title: Text("A"))
       }
       
-      
-//      HStack {
-//        Text("GOGOGO")
-//        Spacer()
-//
-//        Text("DOWNLOAD")
-//          .padding()
-//          .background(.gray)
-//          .onTapGesture {
-//            showAlert = true
-//          }
-//
-//      }
-//      .frame(maxWidth: .infinity, minHeight: 100)
-//      .background(.brown)
-//      .onTapGesture {
-//        showAlert = true
-//      }
-
+    } //Nav
+    .alert(isPresented: $showAlertB) {
+      Alert(title: Text("B"))
     }
-    .animation(nil, value: UUID())
-    .listStyle(.plain)
-    .alert(isPresented: $showAlert) {
-      Alert(title: Text("YES!"))
-    }
-      
-    }
+    
+    
   }
 }
 

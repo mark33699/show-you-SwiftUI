@@ -12,32 +12,13 @@ struct ListView9: View {
   @State var showAlertB = false
 
   var body: some View {
-    NavigationView {
+    
+    VStack {
       List {
         
         ButtonCell(showAlertA: $showAlertA, showAlertB: $showAlertB)
         
-        ScrollView(.horizontal, showsIndicators: false) {
-          HStack(spacing: 0) {
-            ForEach(0..<20) { index in
-              NavigationLink {
-                Text("New Page\(index+1)")
-              } label: {
-                Color(uiColor: .secondarySystemBackground)
-                  .frame(width: 160, height: 90)
-                  .clipShape(RoundedRectangle(cornerRadius: 8))
-                  .shadow(color: .black, radius: 2, x: 2, y: 2)
-                  .padding(.horizontal, 8)
-                  .padding(.vertical, 16)
-                  .overlay(Text("Card \(index+1)"))
-              }
-
-            }
-          }
-        }
-        .padding(.horizontal, 8)
-        .background(.brown)
-        .listRowSeparator(.hidden)
+        ScrollCell()
         
       } //List
       .listStyle(.plain)
@@ -45,9 +26,11 @@ struct ListView9: View {
         Alert(title: Text("A"))
       }
       
-    } //Nav
-    .alert(isPresented: $showAlertB) {
-      Alert(title: Text("B"))
+      Color.clear.frame(height: 1)
+        .alert(isPresented: $showAlertB) {
+          Alert(title: Text("B"))
+        }
+      
     }
     
     
@@ -105,6 +88,31 @@ struct ButtonCell: View {
     }
     .frame(maxWidth: .infinity, minHeight: 100)
     .onTapGesture {}
+    .listRowSeparator(.hidden)
+  }
+}
+
+struct ScrollCell: View {
+  var body: some View {
+    ScrollView(.horizontal, showsIndicators: false) {
+      HStack(spacing: 0) {
+        ForEach(0..<20) { index in
+          NavigationLink {
+            Text("New Page\(index+1)")
+          } label: {
+            Color(uiColor: .secondarySystemBackground)
+              .frame(width: 160, height: 90)
+              .clipShape(RoundedRectangle(cornerRadius: 8))
+              .shadow(color: .black, radius: 2, x: 2, y: 2)
+              .padding(.horizontal, 8)
+              .padding(.vertical, 16)
+              .overlay(Text("Card \(index+1)"))
+          }
+        }
+      }
+    }
+    .padding(.horizontal, 8)
+    .background(.brown)
     .listRowSeparator(.hidden)
   }
 }

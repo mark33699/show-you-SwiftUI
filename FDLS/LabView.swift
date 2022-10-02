@@ -9,47 +9,14 @@ import SwiftUI
 
 struct LabView: View {
     var body: some View {
-      GroupBox {//1
-        GroupBox {//2
-          GroupBox {//3
-            GroupBox {//4
-              GroupBox {//5
-                GroupBox {//6
-                  GroupBox {//7
-                    GroupBox {//8
-                      GroupBox {//9
-                        GroupBox {//10
-                          GroupBox {//11
-                            GroupBox {//12
-                              GroupBox {//13
-                                GroupBox {//14
-                                  
-                                  //Gap
-                                  
-//                                  GroupBox {//15
-//                                    GroupBox {//16
-//                                      GroupBox {//17
-//                                        GroupBox {//18
-                                          
-//                                        }.background(.red)
-//                                      }.background(.red)
-//                                    }.background(.red)
-//                                  }.background(.red)
-                                  
-                                }.background(.red)
-                              }.background(.red)
-                            }.background(.red)
-                          }.background(.red)
-                        }.background(.red)
-                      }.background(.red)
-                    }.background(.red)
-                  }.background(.red)
-                }.background(.red)
-              }.background(.red)
-            }.background(.red)
-          }.background(.red)
-        }.background(.red)
-      }.background(.red)
+      HStack {
+        Spacer()
+        ScrollView {
+          ForEach(0..<100) {
+            Text("\($0)")
+          }
+        }.padding(.vertical, 1)
+      }
     }
 }
 

@@ -36,6 +36,7 @@
 		3CA7EA8828ABFF940005C958 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8728ABFF940005C958 /* RootView.swift */; };
 		3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8928ABFF950005C958 /* Assets.xcassets */; };
 		3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */; };
+		3CC2E9E228EA0DC2009C6DF0 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2E9E128EA0DC2009C6DF0 /* GridView.swift */; };
 		3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE06CEC28BD967C00DE43C8 /* TextView.swift */; };
 		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
@@ -75,6 +76,7 @@
 		3CA7EA8728ABFF940005C958 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3CA7EA8928ABFF950005C958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CA7EA8C28ABFF950005C958 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CC2E9E128EA0DC2009C6DF0 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		3CE06CEC28BD967C00DE43C8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				3CE40F6D28D823AD00F1F945 /* ColorView.swift */,
 				3C8A995128BFB536002B776A /* CommonView.swift */,
 				3C713D9128C4827B006259A4 /* DatePickerView.swift */,
+				3CC2E9E128EA0DC2009C6DF0 /* GridView.swift */,
 				3C810BE128DA06D300EFA209 /* ImagePickerView.swift */,
 				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
 				3C7A778428DB7746001AC918 /* LayoutView.swift */,
@@ -256,6 +259,7 @@
 				3C6B61DA28DDEE6800F31A41 /* ListView8.swift in Sources */,
 				3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */,
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
+				3CC2E9E228EA0DC2009C6DF0 /* GridView.swift in Sources */,
 				3C713D9828C52B29006259A4 /* AlertView.swift in Sources */,
 				3C6B61D428DDEE4900F31A41 /* ListView5.swift in Sources */,
 				3C70898C28BDE2E400B6A3D8 /* ButtonView.swift in Sources */,

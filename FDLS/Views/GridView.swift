@@ -58,6 +58,7 @@ struct GridView: View {
                 ForEach(0..<count) { item in
                   Text("\(section)-\(item)")
                     .padding()
+                    .frame(maxWidth: isFullItem ? .infinity : 75)
                     .background(Color(UIColor.systemMint))
                 }
               } header: {

@@ -9,28 +9,16 @@ import SwiftUI
 
 struct LabView: View {
   
-  @State var opacityValue = 0.004167
+  @State var width = 125.0
   
     var body: some View {
       
-      let isShow = false
+      let isFull = false
       
-      VStack {
-        Color.pink
-          .overlay(Text("\(opacityValue)"))
-        
-//        if isShow {
-//          Color.pink
-//        }
-        
-        Color.pink
-          .onTapGesture {
-            opacityValue -= 0.000001
-          }
-          .opacity(isShow ? 1 : opacityValue)
-        
-        Color.pink
-      }
+      Text("foo")
+        .frame(maxWidth: isFull ? .infinity : width)
+        .background(.brown)
+      
     }
 }
 

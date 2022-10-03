@@ -21,7 +21,6 @@
 		3C70898C28BDE2E400B6A3D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70898B28BDE2E400B6A3D8 /* ButtonView.swift */; };
 		3C713D9228C4827B006259A4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9128C4827B006259A4 /* DatePickerView.swift */; };
 		3C713D9428C51946006259A4 /* OtherControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9328C51946006259A4 /* OtherControlView.swift */; };
-		3C713D9628C529B8006259A4 /* OtherPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9528C529B8006259A4 /* OtherPickerView.swift */; };
 		3C713D9828C52B29006259A4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9728C52B29006259A4 /* AlertView.swift */; };
 		3C7A778528DB7746001AC918 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A778428DB7746001AC918 /* LayoutView.swift */; };
 		3C7A778728DB7F72001AC918 /* LabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A778628DB7F72001AC918 /* LabView.swift */; };
@@ -59,7 +58,6 @@
 		3C70898B28BDE2E400B6A3D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		3C713D9128C4827B006259A4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		3C713D9328C51946006259A4 /* OtherControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherControlView.swift; sourceTree = "<group>"; };
-		3C713D9528C529B8006259A4 /* OtherPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPickerView.swift; sourceTree = "<group>"; };
 		3C713D9728C52B29006259A4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		3C7530FA28BD252500897085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C7A778428DB7746001AC918 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				3C6B61C928DDBB3700F31A41 /* ListView.swift */,
 				3C6B61DD28DDEE7F00F31A41 /* listView */,
 				3C713D9328C51946006259A4 /* OtherControlView.swift */,
-				3C713D9528C529B8006259A4 /* OtherPickerView.swift */,
 				3C8DF9C328CE5A0A009058FA /* OtherView.swift */,
 				3C8A995528C3645C002B776A /* PickerView.swift */,
 				A051D99128DF7A0500D26BE0 /* ScrollableView.swift */,
@@ -279,7 +276,6 @@
 				3C6B61CA28DDBB3700F31A41 /* ListView.swift in Sources */,
 				3C6B61CC28DDBF3400F31A41 /* ListView1.swift in Sources */,
 				A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */,
-				3C713D9628C529B8006259A4 /* OtherPickerView.swift in Sources */,
 				3C8DF9C428CE5A0A009058FA /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

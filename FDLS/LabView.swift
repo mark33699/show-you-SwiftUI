@@ -9,15 +9,9 @@ import SwiftUI
 
 struct LabView: View {
   
-  @State var width = 125.0
-  
     var body: some View {
       
-      let isFull = false
-      
-      Text("foo")
-        .frame(maxWidth: isFull ? .infinity : width)
-        .background(.brown)
+      EmptyView()
       
     }
 }

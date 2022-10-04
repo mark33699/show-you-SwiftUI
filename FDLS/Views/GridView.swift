@@ -25,10 +25,17 @@ enum GridHAlign: String, CaseIterable {
   case trailing
 }
 
+enum ViewHAlign: String, CaseIterable {
+  case leading
+  case center
+  case trailing
+}
+
 struct GridView: View {
   @State var gridType: GridType = .fixed
   @State var gridVAlign: GridVAlign = .center
   @State var gridHAlign: GridHAlign = .center
+  @State var viewHAlign: ViewHAlign = .center
   @State var itemWidth = 125.0
   @State var columnCount = 1
   @State var isFullItem = false
@@ -48,7 +55,7 @@ struct GridView: View {
         ScrollView {
           LazyVGrid(
             columns: getGridItems(),
-            alignment: .leading, // 只能控水平對齊 (但還是以item為主)
+            alignment: getHAlignment(), // 只能控水平對齊 (但還是以item為主)
             spacing: 10, // 垂直間隔
             pinnedViews: [.sectionHeaders, .sectionFooters])
           {
@@ -96,6 +103,13 @@ struct GridView: View {
                   .tag(GridHAlign.allCases[idx])
               }
             }
+            Divider()
+            Picker("", selection: $viewHAlign) {
+              ForEach(ViewHAlign.allCases.indices, id: \.self) { idx in
+                Text("\(ViewHAlign.allCases[idx].rawValue)")
+                  .tag(ViewHAlign.allCases[idx])
+              }
+            }
           }
           .padding(.bottom, 8)
           .pickerStyle(.segmented)
@@ -122,14 +136,15 @@ struct GridView: View {
     } // ZStack
   }
   
+  
   private func getGridItems() -> [GridItem] {
     switch gridType {
     case .fixed:
-      return Array(repeating: GridItem(.fixed(itemWidth), alignment: getAlignment()), count: columnCount)
+      return Array(repeating: GridItem(.fixed(itemWidth), alignment: getAlignment()), count: columnCount) //就不要控數量了, 空間不夠會跑版
     case .adaptive:
       return Array(repeating: GridItem(.adaptive(minimum: itemWidth), alignment: getAlignment()), count: columnCount)
     case .flexible:
-      return Array(repeating: GridItem(.flexible(), alignment: getAlignment()), count: columnCount)
+      return Array(repeating: GridItem(.flexible(minimum: itemWidth), alignment: getAlignment()), count: columnCount) //就不要控min, 空間不夠會跑版
     }
   }
   
@@ -148,12 +163,22 @@ struct GridView: View {
     case (.bottom, .trailing): return .bottomTrailing
     }
   }
+  
+  func getHAlignment() -> HorizontalAlignment {
+    switch viewHAlign {
+    case .leading: return .leading
+    case .center: return .center
+    case .trailing: return .trailing
+    }
+  }
+  
 }
+
 
 struct GridView_Previews: PreviewProvider {
   static var previews: some View {
-    GridView()
+//    GridView()
 //    GridView().previewDevice("iPhone 12 Pro")
-//    GridView().previewDevice("iPhone 11 Pro Max")
+    GridView().previewDevice("iPhone 11 Pro Max")
   }
 }

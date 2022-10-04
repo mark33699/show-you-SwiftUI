@@ -26,8 +26,11 @@ struct RootView: View {
         DisclosureGroup("視覺") {
           getSubList(from: 10, to: 15)
         }
-        DisclosureGroup("滑動", isExpanded: $isExpanded) {
+        DisclosureGroup("滑動") {
           getSubList(from: 15, to: 18)
+        }
+        DisclosureGroup("導航", isExpanded: $isExpanded) {
+          getSubList(from: 18, to: 19)
         }
       }
       .safeAreaInset(edge: .top) { layoutGuide }
@@ -90,4 +93,6 @@ let lessons = [
   Lesson(name: "滾動", view: AnyView(ScrollableView())), //18
   Lesson(name: "列表", view: AnyView(ListView())), //19~21
   Lesson(name: "表格", view: AnyView(GridView())), //22
+  
+  Lesson(name: "切換頁面", view: AnyView(NaviView())), //23
 ]

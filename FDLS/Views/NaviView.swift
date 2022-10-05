@@ -7,14 +7,31 @@
 
 import SwiftUI
 
+struct PassItem: Identifiable {
+    let id = UUID()
+    var isTrue: Bool
+}
+
 struct NaviView: View {
   @State var isPresentSheet = false
   @State var isPresentCover = false
+  @State var item = PassItem(isTrue: false)
   
   var body: some View {
-    VStack(spacing: 100) {
+    VStack(spacing: 50) {
+      
+      Link(destination: .init(string: "https://developer.apple.com/xcode/swiftui")!) {
+        Text("Link").padding()
+      }
+      
+      Divider()
+      
+      HStack {
+        Toggle.init("", isOn: $item.isTrue).labelsHidden()
+      }
+      
       NavigationLink {
-        TheView(message: "Another View -> A")
+        TheView(item: $item, message: "Another View -> A", couldClose: false)
       } label: {
         Text("NavigationLink").padding()
       }
@@ -25,7 +42,7 @@ struct NaviView: View {
         Text(".sheet").padding()
       }
       .sheet(isPresented: $isPresentSheet) {
-        TheView(message: "Another View -> B")
+        TheView(item: $item, message: "Another View -> B", couldClose: false)
       }
         
       Button {
@@ -34,8 +51,9 @@ struct NaviView: View {
         Text(".fullScreenCover").padding()
       }
       .fullScreenCover(isPresented: $isPresentCover) {
-        TheView(message: "Another View -> C")
+        TheView(item: $item, message: "Another View -> C", couldClose: true)
       }
+      
     }
   }
 }
@@ -47,7 +65,9 @@ struct TheView: View {
 //  @Environment(\.presentationMode) var presentation //deprecated
   @Environment(\.dismiss) var dismiss
   
-  var message: String
+  @Binding var item: PassItem
+  let message: String
+  let couldClose: Bool
   
   var body: some View {
     VStack {
@@ -56,12 +76,14 @@ struct TheView: View {
           dismiss()
         } label: {
           Image(systemName: "xmark")
+            .opacity(couldClose ? 1 : 0)
         }
         .padding()
         
         Spacer()
       }
       Spacer()
+      Toggle.init("", isOn: $item.isTrue).labelsHidden()
       Text(message)
       Spacer()
     }

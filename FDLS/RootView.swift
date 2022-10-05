@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+let kTabLessonName = "頁籤"
+
 struct RootView: View {
   
   @State var isExpanded = true
+  @State var isPresented = false
   
   var body: some View {
     NavigationView {
@@ -30,13 +33,18 @@ struct RootView: View {
           getSubList(from: 15, to: 18)
         }
         DisclosureGroup("導航", isExpanded: $isExpanded) {
-          getSubList(from: 18, to: 19)
+          getSubList(from: 18, to: 20)
         }
       }
       .safeAreaInset(edge: .top) { layoutGuide }
       .safeAreaInset(edge: .bottom) { layoutGuide }
       .navigationBarTitleDisplayMode(.inline) // for next view
       .navigationBarHidden(true) // not on NavigationView
+    }
+    .sheet(isPresented: $isPresented) {
+      if let tabLesson = lessons.filter{ $0.name == kTabLessonName }.first {
+        tabLesson.view
+      }
     }
   }
 
@@ -49,11 +57,17 @@ struct RootView: View {
   func getSubList(from: Int, to: Int) -> some View{
       ForEach(from..<to, id: \.self) { index in
         let lesson = lessons[index]
-        NavigationLink {
-          lesson.view
-        } label: {
-          Text("\(lesson.name)")
+        let label = Text("\(lesson.name)")
+        if lesson.name == kTabLessonName {
+          Button {
+            isPresented = true
+          } label: { label }
+        } else {
+          NavigationLink {
+            lesson.view
+          } label: { label }
         }
+        
       }
   }
 
@@ -95,4 +109,5 @@ let lessons = [
   Lesson(name: "表格", view: AnyView(GridView())), //22
   
   Lesson(name: "切換頁面", view: AnyView(NaviView())), //23
+  Lesson(name: kTabLessonName, view: AnyView(BottomNaviView())), //24
 ]

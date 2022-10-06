@@ -20,7 +20,7 @@ struct TabModel: Identifiable {
 let tabs = [
   TabModel(color: .red, name: "featured", imageName: "star"),
   TabModel(color: .orange, name: "bookmarks", imageName: "book"),
-  TabModel(color: .yellow, name: "contacts", imageName: "person.crop.circle"),
+  TabModel(color: .clear, name: "add", imageName: "plus.circle"),
   TabModel(color: .green, name: "recents", imageName: "clock"),
   TabModel(color: .cyan, name: "search", imageName: "magnifyingglass"),
 //    TabModel(color: .gray, name: "setting", imageName: "gearshape"),
@@ -31,6 +31,7 @@ struct BottomNaviView: View {
   @State private var uuids = Array(repeating: UUID(), count: tabs.count)
   @State private var tabSelectedIndex = 0
   @State private var isTappedTwice = false
+  @State private var isPresentedAddView = false
   
   var body: some View {
     
@@ -47,36 +48,58 @@ struct BottomNaviView: View {
     return TabView(selection: handler) { //explicit use 'return' to avoid declaration 'handler' error: Closure containing a declaration cannot be used with result builder 'ViewBuilder'
       
       ForEach(tabs.indices) { index in
+        
         let tab = tabs[index]
-        NavigationView {
+        
+        if index == 2 {
           tab.color
-            .id(uuids[index])
-            .navigationTitle(Text(tab.name.uppercased()))
-            .overlay {
-              VStack {
-                Text(tab.title)
-                NavigationLink {
-                  NextView(color: tab.color.opacity(0.5), number: 1)
-                } label: {
-                  Text("Next!").tint(.white)
-                }.buttonStyle(.borderedProminent)
-              }
+            .tabItem {
+              Label(tab.name, systemImage: tab.imageName)
             }
-            .onChange(of: isTappedTwice, perform: { isTappedTwice in
-              guard isTappedTwice else { return }
-              uuids[index] = UUID()
-              self.isTappedTwice = false
-            })
+            .tag(index)
+          
+        } else {
+          NavigationView {
+            tab.color
+              .id(uuids[index])
+              .navigationTitle(Text(tab.name.uppercased()))
+              .overlay {
+                VStack {
+                  Text(tab.title)
+                  NavigationLink {
+                    NextView(color: tab.color.opacity(0.5), number: 1)
+                  } label: {
+                    Text("Next!").tint(.white)
+                  }.buttonStyle(.borderedProminent)
+                }
+              }
+              .onChange(of: isTappedTwice, perform: { isTappedTwice in
+                guard isTappedTwice else { return }
+                uuids[index] = UUID()
+                self.isTappedTwice = false
+              })
+            
+          } //NavigationView
+          .tabItem {
+            Label(tab.name, systemImage: tab.imageName)
+          }
+          .tag(index)
         }
-        .tabItem {
-          Label(tab.name, systemImage: tab.imageName)
-        }
-        .tag(index)
+        
       } //ForEach
       
     } //TabView
     .onChange(of: tabSelectedIndex) { newValue in
       print("tab \(newValue) selected")
+      if newValue == 2 {
+        isPresentedAddView = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+          tabSelectedIndex = 0
+        }
+      }
+    }
+    .sheet(isPresented: $isPresentedAddView) {
+      Text("Let's Add Something")
     }
     
     

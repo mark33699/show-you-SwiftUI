@@ -17,25 +17,40 @@ struct TabModel: Identifiable {
   }
 }
 
-struct BottomNaviView: View {
-  let tabs = [
-    TabModel(color: .red, name: "featured", imageName: "star"),
-    TabModel(color: .orange, name: "bookmarks", imageName: "book"),
-    TabModel(color: .yellow, name: "contacts", imageName: "person.crop.circle"),
-    TabModel(color: .green, name: "recents", imageName: "clock"),
-    TabModel(color: .cyan, name: "search", imageName: "magnifyingglass"),
+let tabs = [
+  TabModel(color: .red, name: "featured", imageName: "star"),
+  TabModel(color: .orange, name: "bookmarks", imageName: "book"),
+  TabModel(color: .yellow, name: "contacts", imageName: "person.crop.circle"),
+  TabModel(color: .green, name: "recents", imageName: "clock"),
+  TabModel(color: .cyan, name: "search", imageName: "magnifyingglass"),
 //    TabModel(color: .gray, name: "setting", imageName: "gearshape"),
-  ]
+]
+
+struct BottomNaviView: View {
   
-  @State var tabSelectedIndex = 0
+  @State private var uuids = Array(repeating: UUID(), count: tabs.count)
+  @State private var tabSelectedIndex = 0
+  @State private var isTappedTwice = false
   
   var body: some View {
-    TabView(selection: $tabSelectedIndex) {
+    
+    var handler: Binding<Int> { Binding (
+        get: { self.tabSelectedIndex },
+        set: {
+            if $0 == self.tabSelectedIndex {
+                isTappedTwice = true
+            }
+            self.tabSelectedIndex = $0
+        }
+    )}
+    
+    return TabView(selection: handler) { //explicit use 'return' to avoid declaration 'handler' error: Closure containing a declaration cannot be used with result builder 'ViewBuilder'
       
       ForEach(tabs.indices) { index in
         let tab = tabs[index]
         NavigationView {
           tab.color
+            .id(uuids[index])
             .navigationTitle(Text(tab.name.uppercased()))
             .overlay {
               VStack {
@@ -47,6 +62,11 @@ struct BottomNaviView: View {
                 }.buttonStyle(.borderedProminent)
               }
             }
+            .onChange(of: isTappedTwice, perform: { isTappedTwice in
+              guard isTappedTwice else { return }
+              uuids[index] = UUID()
+              self.isTappedTwice = false
+            })
         }
         .tabItem {
           Label(tab.name, systemImage: tab.imageName)

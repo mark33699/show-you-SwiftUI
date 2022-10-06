@@ -28,19 +28,9 @@ struct BottomNaviView: View {
   ]
   
   @State var tabSelectedIndex = 0
-  @State private var resetNavigationID = UUID()
   
   var body: some View {
-    
-    let selectable = Binding( // << proxy binding to catch tab tap
-        get: { tabSelectedIndex },
-        set: { tabSelectedIndex = $0
-            // set new ID to recreate NavigationView, so put it
-            // in root state, same as is on change tab and back
-            resetNavigationID = UUID()
-    })
-    
-    TabView(selection: selectable) {
+    TabView(selection: $tabSelectedIndex) {
       
       ForEach(tabs.indices) { index in
         let tab = tabs[index]
@@ -57,8 +47,7 @@ struct BottomNaviView: View {
                 }.buttonStyle(.borderedProminent)
               }
             }
-        } //NavigationView
-        .id(resetNavigationID)
+        }
         .tabItem {
           Label(tab.name, systemImage: tab.imageName)
         }

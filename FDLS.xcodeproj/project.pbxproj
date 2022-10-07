@@ -23,6 +23,7 @@
 		3C713D9228C4827B006259A4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9128C4827B006259A4 /* DatePickerView.swift */; };
 		3C713D9428C51946006259A4 /* OtherControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9328C51946006259A4 /* OtherControlView.swift */; };
 		3C713D9828C52B29006259A4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C713D9728C52B29006259A4 /* AlertView.swift */; };
+		3C74F21728EF5668007E370C /* SwipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74F21628EF5668007E370C /* SwipeTabView.swift */; };
 		3C7A778528DB7746001AC918 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A778428DB7746001AC918 /* LayoutView.swift */; };
 		3C7A778728DB7F72001AC918 /* LabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A778628DB7F72001AC918 /* LabView.swift */; };
 		3C7D41C628ECA551005DA580 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D41C528ECA551005DA580 /* NaviView.swift */; };
@@ -62,6 +63,7 @@
 		3C713D9128C4827B006259A4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		3C713D9328C51946006259A4 /* OtherControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherControlView.swift; sourceTree = "<group>"; };
 		3C713D9728C52B29006259A4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		3C74F21628EF5668007E370C /* SwipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTabView.swift; sourceTree = "<group>"; };
 		3C7530FA28BD252500897085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C7A778428DB7746001AC918 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		3C7A778628DB7F72001AC918 /* LabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				3C8A995528C3645C002B776A /* PickerView.swift */,
 				A051D99128DF7A0500D26BE0 /* ScrollableView.swift */,
 				3C810BDF28D8A2C300EFA209 /* ShapeView.swift */,
+				3C74F21628EF5668007E370C /* SwipeTabView.swift */,
 				A0B0F8C228CD055900835342 /* TextInputView.swift */,
 				3CE06CEC28BD967C00DE43C8 /* TextView.swift */,
 				3C8A995328C351A7002B776A /* VStackView.swift */,
@@ -277,6 +280,7 @@
 				3C8A995428C351A7002B776A /* VStackView.swift in Sources */,
 				3C7A778728DB7F72001AC918 /* LabView.swift in Sources */,
 				3C6B61D828DDEE5F00F31A41 /* ListView7.swift in Sources */,
+				3C74F21728EF5668007E370C /* SwipeTabView.swift in Sources */,
 				3C713D9228C4827B006259A4 /* DatePickerView.swift in Sources */,
 				3C810BE028D8A2C300EFA209 /* ShapeView.swift in Sources */,
 				3C6B61DC28DDEE6D00F31A41 /* ListView9.swift in Sources */,

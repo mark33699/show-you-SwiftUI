@@ -12,6 +12,7 @@ struct FDLSApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+//          LabView()
         }
     }
 }

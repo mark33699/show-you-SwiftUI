@@ -33,7 +33,7 @@ struct RootView: View {
           getSubList(from: 15, to: 18)
         }
         DisclosureGroup("導航", isExpanded: $isExpanded) {
-          getSubList(from: 18, to: 20)
+          getSubList(from: 18, to: 21)
         }
       }
       .safeAreaInset(edge: .top) { layoutGuide }
@@ -110,4 +110,5 @@ let lessons = [
   
   Lesson(name: "切換頁面", view: AnyView(NaviView())), //23
   Lesson(name: kTabLessonName, view: AnyView(BottomNaviView())), //24
+  Lesson(name: "滑頁", view: AnyView(SwipeTabView())), //25
 ]

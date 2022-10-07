@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C27C9DB28ED9C910040F557 /* BottomNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27C9DA28ED9C910040F557 /* BottomNaviView.swift */; };
+		3C34029628F0B02700043FF3 /* LifeCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34029528F0B02700043FF3 /* LifeCycleView.swift */; };
 		3C48C6C428BD3683000B7EDC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C48C6C328BD3683000B7EDC /* Launch.storyboard */; };
 		3C6B61CA28DDBB3700F31A41 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B61C928DDBB3700F31A41 /* ListView.swift */; };
 		3C6B61CC28DDBF3400F31A41 /* ListView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B61CB28DDBF3400F31A41 /* ListView1.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		3C27C9DA28ED9C910040F557 /* BottomNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNaviView.swift; sourceTree = "<group>"; };
+		3C34029528F0B02700043FF3 /* LifeCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleView.swift; sourceTree = "<group>"; };
 		3C48C6C328BD3683000B7EDC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		3C6B61C928DDBB3700F31A41 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		3C6B61CB28DDBF3400F31A41 /* ListView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView1.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				3C810BE128DA06D300EFA209 /* ImagePickerView.swift */,
 				3C8B7AA428C90188001CDFCF /* ImageView.swift */,
 				3C7A778428DB7746001AC918 /* LayoutView.swift */,
+				3C34029528F0B02700043FF3 /* LifeCycleView.swift */,
 				3C6B61C928DDBB3700F31A41 /* ListView.swift */,
 				3C6B61DD28DDEE7F00F31A41 /* listView */,
 				3C7D41C528ECA551005DA580 /* NaviView.swift */,
@@ -273,6 +276,7 @@
 				3CA7EA8628ABFF940005C958 /* FDLSApp.swift in Sources */,
 				A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */,
 				3C6B61D028DDEE3D00F31A41 /* ListView3.swift in Sources */,
+				3C34029628F0B02700043FF3 /* LifeCycleView.swift in Sources */,
 				3C7D41C628ECA551005DA580 /* NaviView.swift in Sources */,
 				3C713D9428C51946006259A4 /* OtherControlView.swift in Sources */,
 				3C6B61D628DDEE5A00F31A41 /* ListView6.swift in Sources */,

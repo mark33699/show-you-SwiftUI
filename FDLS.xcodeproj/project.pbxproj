@@ -42,6 +42,7 @@
 		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
 		A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051D99128DF7A0500D26BE0 /* ScrollableView.swift */; };
+		A0A008A528F1CBB800D33574 /* MacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A008A428F1CBB800D33574 /* MacView.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
 		A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */; };
 		A0B3DAD628F1ACD000F7338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD528F1ACD000F7338C /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		A051D99128DF7A0500D26BE0 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
+		A0A008A428F1CBB800D33574 /* MacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacView.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDLS-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLS_MacApp.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */,
+				A0A008A428F1CBB800D33574 /* MacView.swift */,
 				A0B3DAD528F1ACD000F7338C /* Assets.xcassets */,
 				A0B3DADA28F1ACD000F7338C /* FDLS_Mac.entitlements */,
 				A0B3DAD728F1ACD000F7338C /* Preview Content */,
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A008A528F1CBB800D33574 /* MacView.swift in Sources */,
 				A0B3DB2828F1BED100F7338C /* MultiplatformView.swift in Sources */,
 				A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */,
 			);

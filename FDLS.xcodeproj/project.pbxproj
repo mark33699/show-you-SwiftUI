@@ -43,8 +43,6 @@
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
 		A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051D99128DF7A0500D26BE0 /* ScrollableView.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
-		A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */; };
-		A0B3DAD428F1ACCD00F7338C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DAD328F1ACCD00F7338C /* ContentView.swift */; };
 		A0B3DAD628F1ACD000F7338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD528F1ACD000F7338C /* Assets.xcassets */; };
 		A0B3DAD928F1ACD000F7338C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD828F1ACD000F7338C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -89,8 +87,6 @@
 		A051D99128DF7A0500D26BE0 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDLS-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLS_MacApp.swift; sourceTree = "<group>"; };
-		A0B3DAD328F1ACCD00F7338C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0B3DAD528F1ACD000F7338C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B3DAD828F1ACD000F7338C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0B3DADA28F1ACD000F7338C /* FDLS_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FDLS_Mac.entitlements; sourceTree = "<group>"; };
@@ -203,8 +199,6 @@
 		A0B3DAD028F1ACCD00F7338C /* FDLS-Mac */ = {
 			isa = PBXGroup;
 			children = (
-				A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */,
-				A0B3DAD328F1ACCD00F7338C /* ContentView.swift */,
 				A0B3DAD528F1ACD000F7338C /* Assets.xcassets */,
 				A0B3DADA28F1ACD000F7338C /* FDLS_Mac.entitlements */,
 				A0B3DAD728F1ACD000F7338C /* Preview Content */,
@@ -361,8 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B3DAD428F1ACCD00F7338C /* ContentView.swift in Sources */,
-				A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

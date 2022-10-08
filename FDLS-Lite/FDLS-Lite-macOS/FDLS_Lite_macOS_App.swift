@@ -11,7 +11,7 @@ import SwiftUI
 struct FDLS_Lite_macOS_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          MultiplatformView()
         }
     }
 }

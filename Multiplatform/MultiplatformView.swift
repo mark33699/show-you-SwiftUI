@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MultiplatformView: View {
+  
+  @State var isShowAlert = false
+  
   var body: some View {
     ZStack {
       #if os(macOS)
@@ -17,6 +20,12 @@ struct MultiplatformView: View {
       #endif
       Text("Hello, Multiplatform!")
         .padding()
+        .onTapGesture {
+          isShowAlert  = true
+        }
+        .alert(isPresented: $isShowAlert) {
+          Alert(title: Text("Hello"))
+        }
     }
   }
 }

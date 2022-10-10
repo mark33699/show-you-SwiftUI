@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextInputView: View {
   @State var input = ""
-  @State var isShowAlert = false
+  @State private var isShowAlert = false
   @FocusState var isFieldFocused: Bool
   @FocusState var isEditorFocused: Bool
 

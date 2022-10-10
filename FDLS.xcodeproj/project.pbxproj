@@ -44,7 +44,13 @@
 		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
 		A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051D99128DF7A0500D26BE0 /* ScrollableView.swift */; };
+		A0A008A528F1CBB800D33574 /* MacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A008A428F1CBB800D33574 /* MacView.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
+		A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */; };
+		A0B3DAD628F1ACD000F7338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD528F1ACD000F7338C /* Assets.xcassets */; };
+		A0B3DAD928F1ACD000F7338C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD828F1ACD000F7338C /* Preview Assets.xcassets */; };
+		A0B3DB2728F1BED100F7338C /* MultiplatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DB2628F1BED100F7338C /* MultiplatformView.swift */; };
+		A0B3DB2828F1BED100F7338C /* MultiplatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DB2628F1BED100F7338C /* MultiplatformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,11 +93,25 @@
 		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		A051D99128DF7A0500D26BE0 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
+		A0A008A428F1CBB800D33574 /* MacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacView.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDLS-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLS_MacApp.swift; sourceTree = "<group>"; };
+		A0B3DAD528F1ACD000F7338C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0B3DAD828F1ACD000F7338C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0B3DADA28F1ACD000F7338C /* FDLS_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FDLS_Mac.entitlements; sourceTree = "<group>"; };
+		A0B3DB2628F1BED100F7338C /* MultiplatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3CA7EA7F28ABFF940005C958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0B3DACC28F1ACCD00F7338C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,7 +140,9 @@
 		3CA7EA7928ABFF930005C958 = {
 			isa = PBXGroup;
 			children = (
+				A0B3DB2528F1BE5E00F7338C /* Multiplatform */,
 				3CA7EA8428ABFF940005C958 /* FDLS */,
+				A0B3DAD028F1ACCD00F7338C /* FDLS-Mac */,
 				3CA7EA8328ABFF940005C958 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3CA7EA8228ABFF940005C958 /* FDLS.app */,
+				A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +210,34 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A0B3DAD028F1ACCD00F7338C /* FDLS-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */,
+				A0A008A428F1CBB800D33574 /* MacView.swift */,
+				A0B3DAD528F1ACD000F7338C /* Assets.xcassets */,
+				A0B3DADA28F1ACD000F7338C /* FDLS_Mac.entitlements */,
+				A0B3DAD728F1ACD000F7338C /* Preview Content */,
+			);
+			path = "FDLS-Mac";
+			sourceTree = "<group>";
+		};
+		A0B3DAD728F1ACD000F7338C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3DAD828F1ACD000F7338C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0B3DB2528F1BE5E00F7338C /* Multiplatform */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3DB2628F1BED100F7338C /* MultiplatformView.swift */,
+			);
+			path = Multiplatform;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,6 +258,23 @@
 			productReference = 3CA7EA8228ABFF940005C958 /* FDLS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A0B3DACE28F1ACCD00F7338C /* FDLS-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0B3DADD28F1ACD000F7338C /* Build configuration list for PBXNativeTarget "FDLS-Mac" */;
+			buildPhases = (
+				A0B3DACB28F1ACCD00F7338C /* Sources */,
+				A0B3DACC28F1ACCD00F7338C /* Frameworks */,
+				A0B3DACD28F1ACCD00F7338C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FDLS-Mac";
+			productName = "FDLS-Mac";
+			productReference = A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +286,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					3CA7EA8128ABFF940005C958 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A0B3DACE28F1ACCD00F7338C = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -236,6 +307,7 @@
 			projectRoot = "";
 			targets = (
 				3CA7EA8128ABFF940005C958 /* FDLS */,
+				A0B3DACE28F1ACCD00F7338C /* FDLS-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +320,15 @@
 				3CA7EA8D28ABFF950005C958 /* Preview Assets.xcassets in Resources */,
 				3CA7EA8A28ABFF950005C958 /* Assets.xcassets in Resources */,
 				3C48C6C428BD3683000B7EDC /* Launch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0B3DACD28F1ACCD00F7338C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B3DAD928F1ACD000F7338C /* Preview Assets.xcassets in Resources */,
+				A0B3DAD628F1ACD000F7338C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +346,7 @@
 				3C7A778528DB7746001AC918 /* LayoutView.swift in Sources */,
 				3CA7EA8828ABFF940005C958 /* RootView.swift in Sources */,
 				3C810BE228DA06D300EFA209 /* ImagePickerView.swift in Sources */,
+				A0B3DB2728F1BED100F7338C /* MultiplatformView.swift in Sources */,
 				3C6B61DA28DDEE6800F31A41 /* ListView8.swift in Sources */,
 				3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */,
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
@@ -293,6 +375,16 @@
 				3C6B61CC28DDBF3400F31A41 /* ListView1.swift in Sources */,
 				A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */,
 				3C8DF9C428CE5A0A009058FA /* OtherView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0B3DACB28F1ACCD00F7338C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0A008A528F1CBB800D33574 /* MacView.swift in Sources */,
+				A0B3DB2828F1BED100F7338C /* MultiplatformView.swift in Sources */,
+				A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +577,66 @@
 			};
 			name = Release;
 		};
+		A0B3DADB28F1ACD000F7338C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Mac";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FDLS-Mac/FDLS_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FDLS-Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = RY4ZLB8695;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.markfly.FDLS.mac.FDLS-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0B3DADC28F1ACD000F7338C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Mac";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FDLS-Mac/FDLS_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FDLS-Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = RY4ZLB8695;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.markfly.FDLS.mac.FDLS-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -502,6 +654,15 @@
 			buildConfigurations = (
 				3CA7EAA728ABFF950005C958 /* Debug */,
 				3CA7EAA828ABFF950005C958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0B3DADD28F1ACD000F7338C /* Build configuration list for PBXNativeTarget "FDLS-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0B3DADB28F1ACD000F7338C /* Debug */,
+				A0B3DADC28F1ACD000F7338C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

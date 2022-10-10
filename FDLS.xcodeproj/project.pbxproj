@@ -42,9 +42,13 @@
 		3CC2E9E228EA0DC2009C6DF0 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2E9E128EA0DC2009C6DF0 /* GridView.swift */; };
 		3CE06CED28BD967C00DE43C8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE06CEC28BD967C00DE43C8 /* TextView.swift */; };
 		3CE40F6E28D823AD00F1F945 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE40F6D28D823AD00F1F945 /* ColorView.swift */; };
+		A012C9F728F1FD5200235BC0 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012C9F628F1FD5200235BC0 /* StorageView.swift */; };
 		A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A027FFEA28CB952F00D02ACB /* ZStackView.swift */; };
 		A051D99228DF7A0500D26BE0 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051D99128DF7A0500D26BE0 /* ScrollableView.swift */; };
 		A0A008A528F1CBB800D33574 /* MacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A008A428F1CBB800D33574 /* MacView.swift */; };
+		A055AA0E28F2AE1000185481 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A055AA0D28F2AE1000185481 /* Alamofire */; };
+		A055AA1028F2B05200185481 /* ApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AA0F28F2B05200185481 /* ApiView.swift */; };
+		A055AA1328F2C27A00185481 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AA1228F2C27A00185481 /* Human.swift */; };
 		A0B0F8C328CD055900835342 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0F8C228CD055900835342 /* TextInputView.swift */; };
 		A0B3DAD228F1ACCD00F7338C /* FDLS_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */; };
 		A0B3DAD628F1ACD000F7338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B3DAD528F1ACD000F7338C /* Assets.xcassets */; };
@@ -91,9 +95,12 @@
 		3CC2E9E128EA0DC2009C6DF0 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		3CE06CEC28BD967C00DE43C8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		3CE40F6D28D823AD00F1F945 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		A012C9F628F1FD5200235BC0 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		A027FFEA28CB952F00D02ACB /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		A051D99128DF7A0500D26BE0 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		A0A008A428F1CBB800D33574 /* MacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacView.swift; sourceTree = "<group>"; };
+		A055AA0F28F2B05200185481 /* ApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiView.swift; sourceTree = "<group>"; };
+		A055AA1228F2C27A00185481 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		A0B0F8C228CD055900835342 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		A0B3DACF28F1ACCD00F7338C /* FDLS-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDLS-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B3DAD128F1ACCD00F7338C /* FDLS_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLS_MacApp.swift; sourceTree = "<group>"; };
@@ -108,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A055AA0E28F2AE1000185481 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3C713D9728C52B29006259A4 /* AlertView.swift */,
+				A055AA1128F2C26100185481 /* API */,
 				3C27C9DA28ED9C910040F557 /* BottomNaviView.swift */,
 				3C70898B28BDE2E400B6A3D8 /* ButtonView.swift */,
 				3CE40F6D28D823AD00F1F945 /* ColorView.swift */,
@@ -202,6 +211,7 @@
 				A051D99128DF7A0500D26BE0 /* ScrollableView.swift */,
 				3C810BDF28D8A2C300EFA209 /* ShapeView.swift */,
 				3C74F21628EF5668007E370C /* SwipeTabView.swift */,
+				A012C9F628F1FD5200235BC0 /* StorageView.swift */,
 				A0B0F8C228CD055900835342 /* TextInputView.swift */,
 				3CE06CEC28BD967C00DE43C8 /* TextView.swift */,
 				3C8A995328C351A7002B776A /* VStackView.swift */,
@@ -238,6 +248,15 @@
 			path = Multiplatform;
 			sourceTree = "<group>";
 		};
+		A055AA1128F2C26100185481 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A055AA0F28F2B05200185481 /* ApiView.swift */,
+				A055AA1228F2C27A00185481 /* Human.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +273,9 @@
 			dependencies = (
 			);
 			name = FDLS;
+			packageProductDependencies = (
+				A055AA0D28F2AE1000185481 /* Alamofire */,
+			);
 			productName = FDLS;
 			productReference = 3CA7EA8228ABFF940005C958 /* FDLS.app */;
 			productType = "com.apple.product-type.application";
@@ -302,6 +324,9 @@
 				Base,
 			);
 			mainGroup = 3CA7EA7928ABFF930005C958;
+			packageReferences = (
+				A055AA0C28F2AE0F00185481 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3CA7EA8328ABFF940005C958 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +377,7 @@
 				3C8A995228BFB536002B776A /* CommonView.swift in Sources */,
 				3CC2E9E228EA0DC2009C6DF0 /* GridView.swift in Sources */,
 				3C713D9828C52B29006259A4 /* AlertView.swift in Sources */,
+				A055AA1028F2B05200185481 /* ApiView.swift in Sources */,
 				3C6B61D428DDEE4900F31A41 /* ListView5.swift in Sources */,
 				3C70898C28BDE2E400B6A3D8 /* ButtonView.swift in Sources */,
 				3C6B61D228DDEE4200F31A41 /* ListView4.swift in Sources */,
@@ -372,8 +398,10 @@
 				3C6B61DC28DDEE6D00F31A41 /* ListView9.swift in Sources */,
 				3C6B61CA28DDBB3700F31A41 /* ListView.swift in Sources */,
 				3C27C9DB28ED9C910040F557 /* BottomNaviView.swift in Sources */,
+				A055AA1328F2C27A00185481 /* Human.swift in Sources */,
 				3C6B61CC28DDBF3400F31A41 /* ListView1.swift in Sources */,
 				A027FFEB28CB952F00D02ACB /* ZStackView.swift in Sources */,
+				A012C9F728F1FD5200235BC0 /* StorageView.swift in Sources */,
 				3C8DF9C428CE5A0A009058FA /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +696,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A055AA0C28F2AE0F00185481 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A055AA0D28F2AE1000185481 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A055AA0C28F2AE0F00185481 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3CA7EA7A28ABFF930005C958 /* Project object */;
 }

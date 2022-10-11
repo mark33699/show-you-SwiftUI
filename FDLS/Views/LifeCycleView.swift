@@ -19,8 +19,14 @@ struct LifeCycleView: View {
   @State var lifeCycle: ViewLifeCycle = .default
   
   init() {
+    print("LifeCycleView: init")
     lifeCycle = .`init`
   }
+  
+  //Deinitializers may only be declared within a class
+//  deinit {
+//
+//  }
   
   var body: some View {
     Group {
@@ -37,10 +43,11 @@ struct LifeCycleView: View {
       
     }
     .onAppear { //will
+      print("LifeCycleView: appear")
       lifeCycle = .appear
     }
-    .onChange(of: lifeCycle) { newValue in
-      print("LifeCycleView: \(newValue)")
+    .onChange(of: lifeCycle) { _ in
+      print("LifeCycleView: onChange")
     }
     .onDisappear { //did
       print("LifeCycleView: disappear")

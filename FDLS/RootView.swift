@@ -36,7 +36,7 @@ struct RootView: View {
           getSubList(from: 18, to: 21)
         }
         DisclosureGroup("其他", isExpanded: $isExpanded) {
-          getSubList(from: 21, to: 22)
+          getSubList(from: 21, to: 24)
         }
       }
       .safeAreaInset(edge: .top) { layoutGuide }
@@ -116,4 +116,7 @@ let lessons = [
   Lesson(name: "滑頁", view: AnyView(SwipeTabView())), //25
   
   Lesson(name: "生命週期", view: AnyView(LifeCycleView())), //26
+  Lesson(name: "本地儲存", view: AnyView(StorageView())), //26
+  Lesson(name: "API", view: AnyView(ApiView())), //27
+  
 ]

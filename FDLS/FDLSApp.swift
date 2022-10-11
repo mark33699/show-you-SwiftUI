@@ -10,9 +10,7 @@ import SwiftUI
 @main
 struct FDLSApp: App {
   @Environment(\.scenePhase) var scenePhase
-  
-  static let rootView = RootView()
-  
+  @State var didEnterBackground = false
   init() {
     print("App init")
   }
@@ -35,8 +33,8 @@ struct FDLSApp: App {
       //✅
       ZStack {
         RootView()
-        if scenePhase != .active {
 
+        if scenePhase != .active && didEnterBackground == false {
           Color.white
             .ignoresSafeArea()
             .overlay {
@@ -53,12 +51,14 @@ struct FDLSApp: App {
       switch newScenePhase {
       case .background:
         print("ScenePhase: Background")
+        didEnterBackground = true
       case .inactive:
         print("ScenePhase: Inactive")
       case .active:
         print("ScenePhase: Active")
       @unknown default: //Switch covers known cases, but 'ScenePhase' may have additional unknown values, possibly added in future versions
         print("ScenePhase: Unknown")
+        didEnterBackground = false
       }
     }
     

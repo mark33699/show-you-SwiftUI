@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+private struct EnableEmergency: EnvironmentKey {
+  static let defaultValue = false
+}
+
+extension EnvironmentValues {
+  var enableEmergency: Bool {
+    get { self[EnableEmergency.self] }
+    set { self[EnableEmergency.self] = newValue }
+  }
+}
+
 @main
 struct FDLSApp: App {
   @Environment(\.scenePhase) var scenePhase
@@ -33,6 +44,7 @@ struct FDLSApp: App {
       //✅
       ZStack {
         RootView()
+          .environment(\.enableEmergency, true)
 
         if scenePhase != .active && didEnterBackground == false {
           Color.white

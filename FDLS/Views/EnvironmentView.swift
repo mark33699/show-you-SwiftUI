@@ -9,29 +9,51 @@ import SwiftUI
 
 struct EnvironmentView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
-  @State var currentPageDarkMode = false
-  @State var wholeAppDarkMode = false
+  @Environment(\.enableEmergency) var enableEmergency: Bool
+  @State var isCurrentPageDarkMode = false
+  @State var isWholeAppDarkMode = false
+  @State var isEnableEmergencyMode = false
+  
+  init() {
+    isEnableEmergencyMode = enableEmergency // now is false
+  }
 
   var body: some View {
     ZStack {
       Color.brown
       
       VStack {
-        Text("Now is \(colorScheme == .dark ? "dark" : "light") mode")
-        Toggle("current page dark mode", isOn: $currentPageDarkMode)
-          .frame(width: 250)
-        Toggle("whole app dark mode", isOn: $wholeAppDarkMode)
-          .frame(width: 250)
+        Group {
+          Text("Now is \(colorScheme == .dark ? "dark" : "light") mode")
+          Toggle("current page dark mode", isOn: $isCurrentPageDarkMode)
+          Toggle("whole app dark mode", isOn: $isWholeAppDarkMode)
+          Toggle("Emergency mode", isOn: $isEnableEmergencyMode)
+          SubView()
+        }
+        .frame(width: 250)
+        .foregroundColor( enableEmergency ? .red : .primary )
       }
-      .colorScheme(currentPageDarkMode ? .dark : .light )
-      .preferredColorScheme(wholeAppDarkMode ? .dark : .light)
+      .colorScheme(isCurrentPageDarkMode ? .dark : .light )
+      .preferredColorScheme(isWholeAppDarkMode ? .dark : .light)
+      .environment(\.enableEmergency, isEnableEmergencyMode)
     }
-    .onChange(of: wholeAppDarkMode) { newValue in
-      currentPageDarkMode = newValue
+    .onAppear {
+      isEnableEmergencyMode = enableEmergency //sync with Environment
+    }
+    .onChange(of: isWholeAppDarkMode) { newValue in
+      isCurrentPageDarkMode = newValue
     }
     
     
     
+  }
+}
+
+struct SubView: View {
+  @Environment(\.enableEmergency) var enableEmergency: Bool
+  var body: some View {
+    Text("I am subView")
+      .foregroundColor( enableEmergency ? .red : .primary )
   }
 }
 

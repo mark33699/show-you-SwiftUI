@@ -13,6 +13,7 @@ struct RootView: View {
   
   @State var isExpanded = true
   @State var isPresented = false
+  @EnvironmentObject var emergencyObject: ReallyEmergencyMode
   
   var body: some View {
     NavigationView {
@@ -61,6 +62,7 @@ struct RootView: View {
       ForEach(from..<to, id: \.self) { index in
         let lesson = lessons[index]
         let label = Text("\(lesson.name)")
+          .foregroundColor(emergencyObject.enable ? .red : .primary)
         if lesson.name == kTabLessonName {
           Button {
             isPresented = true

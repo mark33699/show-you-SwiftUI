@@ -18,10 +18,18 @@ extension EnvironmentValues {
   }
 }
 
+class ReallyEmergencyMode: ObservableObject {
+  @Published var enable = false
+  init(enable: Bool) {
+    self.enable = enable
+  }
+}
+
 @main
 struct FDLSApp: App {
   @Environment(\.scenePhase) var scenePhase
   @State var didEnterBackground = false
+  
   init() {
     print("App init")
   }
@@ -45,6 +53,7 @@ struct FDLSApp: App {
       ZStack {
         RootView()
           .environment(\.enableEmergency, true)
+          .environmentObject(ReallyEmergencyMode(enable: true))
 
         if scenePhase != .active && didEnterBackground == false {
           Color.white

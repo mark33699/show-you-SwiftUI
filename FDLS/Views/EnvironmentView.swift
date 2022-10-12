@@ -10,6 +10,8 @@ import SwiftUI
 struct EnvironmentView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
   @Environment(\.enableEmergency) var enableEmergency: Bool
+  @EnvironmentObject var emergencyObject: ReallyEmergencyMode
+  
   @State var isCurrentPageDarkMode = false
   @State var isWholeAppDarkMode = false
   @State var isEnableEmergencyMode = false
@@ -25,13 +27,25 @@ struct EnvironmentView: View {
       VStack {
         Group {
           Text("Now is \(colorScheme == .dark ? "dark" : "light") mode")
-          Toggle("current page dark mode", isOn: $isCurrentPageDarkMode)
-          Toggle("whole app dark mode", isOn: $isWholeAppDarkMode)
-          Toggle("Emergency mode", isOn: $isEnableEmergencyMode)
-          SubView()
+          Toggle("current page Dark mode", isOn: $isCurrentPageDarkMode)
+          Toggle("whole app Dark mode", isOn: $isWholeAppDarkMode)
         }
         .frame(width: 250)
-        .foregroundColor( enableEmergency ? .red : .primary )
+          
+        Divider()
+        
+        Text("current view follow @Environment")
+          .foregroundColor( enableEmergency ? .red : .primary )
+        Text("current view follow @EnvironmentObject")
+          .foregroundColor( emergencyObject.enable ? .red : .primary )
+        Spacer().frame(height: 16)
+        SubView()
+        
+        Group {
+          Toggle("sublayer Emergency mode", isOn: $isEnableEmergencyMode)
+          Toggle("whole app Emergency mode", isOn: $emergencyObject.enable)
+        }
+        .frame(width: 300)
       }
       .colorScheme(isCurrentPageDarkMode ? .dark : .light )
       .preferredColorScheme(isWholeAppDarkMode ? .dark : .light)
@@ -51,9 +65,13 @@ struct EnvironmentView: View {
 
 struct SubView: View {
   @Environment(\.enableEmergency) var enableEmergency: Bool
+  @EnvironmentObject var emergencyObject: ReallyEmergencyMode
+  
   var body: some View {
-    Text("I am subView")
+    Text("subView follow @Environment")
       .foregroundColor( enableEmergency ? .red : .primary )
+    Text("subView follow @EnvironmentObject")
+      .foregroundColor( emergencyObject.enable ? .red : .primary )
   }
 }
 

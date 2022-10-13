@@ -78,5 +78,6 @@ struct SubView: View {
 struct EnvironmentView_Previews: PreviewProvider {
   static var previews: some View {
     EnvironmentView()
+      .environmentObject(ReallyEmergencyMode(enable: true))
   }
 }

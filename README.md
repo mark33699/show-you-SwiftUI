@@ -121,7 +121,7 @@ Most screenshot is youtube link
 | UIScreen | MediaQuery
 | EmptyView | Container without child
 
-| iOS | Flutter | SwiftUI
+| UIKit | Flutter | SwiftUI
 | -------- | - | -
 | UITapGestureRecognizer | GestureDetector | .onTapGesture
 | UIScrollView |SingleChildScrollView | ScrollView
@@ -130,7 +130,7 @@ Most screenshot is youtube link
 | present | modal_bottom_sheet | .sheet
 | present modalPresentationStyle = .fullScreen | CupertinoPageRoute fullscreenDialog | .fullScreenCover
 
-| Android  | iOS | Flutter | SwiftUI
+| Android  | UIKit | Flutter | SwiftUI
 | -------- | -------- | ------ | -
 | TextView | UILabel    | Text | 
 | Button | UIButton | RawMaterialButton | Button
@@ -157,7 +157,7 @@ Most screenshot is youtube link
 | deinit | onDestroy | dispose | 
 | UserDefault | SharedPreferences| SharedPreferences | AppStorage
 
-| Android | iOS | Flutter(Material) | Flutter(Cupertino) | SwiftUI
+| Android | UIKit | Flutter(Material) | Flutter(Cupertino) | SwiftUI
 | -------- | -------- | - | - | - 
 | Spinner | UIPickerView | showBottomSheet | CupertinoActionSheet | Picker
 | DatePickerDialog | UIDatePicker | showDatePicker/showTimePicker | CupertinoDatePicker | DatePicker
